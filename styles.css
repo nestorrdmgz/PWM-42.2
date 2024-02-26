@@ -1,0 +1,90 @@
+/* Estilos para el encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    font-family: "Arial", sans-serif;
+}
+
+/* Estilos para el logo */
+.header__logo-container {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.header__logo {
+    width: 70px;
+    height: 70px;
+}
+
+/* Estilos para el nav */
+.header__nav {
+    flex-grow: 1;
+}
+
+.header__nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header__nav li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.header__nav li:last-child {
+    margin-right: 0;
+}
+
+.header__nav-button {
+    background-color: white;
+    cursor: pointer;
+    color: #4392da;
+    border: 1px solid #4392da; /* Definir el grosor y color del borde */    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+.header__nav-button:hover {
+    background-color: rgb(67, 146, 218);
+    color: white;
+    border-radius: 5px;
+}
+
+.header__emoji-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 23px; /* Tamaño del emoji */
+    color: #fff;
+}
+
+/* Estilos para el contenedor del botón de inicio de sesión y la foto de perfil */
+.header__login-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+/* Estilos para el botón de inicio de sesión */
+.header__login-button {
+    background-color: #4392da;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 20px;
+
+}
+
+/* Estilos para la foto de perfil */
+.header__profile-photo {
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+}
