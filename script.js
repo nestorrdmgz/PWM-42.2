@@ -4,10 +4,11 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 async function cargarEstructura() {
-    let appDiv = document.getElementById('app');
+    let appDiv = document.getElementById('mejores_jugadores');
 
     // Cargar estructura estática
     appDiv.appendChild(await cargarTemplate('templates/header.html'));
+    appDiv.appendChild(await cargarTemplate('templates/ranking.html'));
     appDiv.appendChild(await cargarTemplate('templates/footer.html'));
 }
 

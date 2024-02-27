@@ -1,99 +1,37 @@
-/* Estilos para el encabezado */
-.header {
-    height: 265px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #ffffff;
+table {
+    width: 100%;
+    border-collapse: collapse;
     font-family: "Arial", sans-serif;
-    background-image: url('https://images.unsplash.com/photo-1587960184060-aa880aabdd04?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxiYXNrZXRiYWxsfGVufDB8fHx8MTcwODM4MzE4NHww&ixlib=rb-4.0.3&w=1600');
-}
+    margin-top: 25px;
 
-/* Estilos para el logo */
-.header__logo-container {
-    flex-grow: 1;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
 }
-
-.header__logo {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+th {
+    background-color: #f2f2f2;
 }
-
-/* Estilos para el nav */
-.header__nav {
-    flex-grow: 1;
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
-
-.header__nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
 }
-
-.header__nav li {
-    display: inline-block;
-    margin-right: 40px;
-    width: 120px; /* Ancho deseado */
-    height: 40px; /* Altura deseada */
+.profile_picture{
+    height: 75px;
+    width: 75px;
 }
-
-.header__nav li:last-child {
-    margin-right: 0;
+#first_ranked{
+    background-color: #CBB809;
 }
-
-.header__nav-button {
-    background-color: white;
-    cursor: pointer;
-    color: #FF7C00;
-    border: 3px solid #FF7C00; /* Definir el grosor y color del borde */
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 16px;
-    width: 100%; /* Ocupar todo el ancho del contenedor */
-    height: 100%; /* Ocupar todo el alto del contenedor */
-    line-height: 40px; /* Alinear verticalmente el texto */
+#second-ranked{
+    background-color: #A2C7DC;
 }
-
-.header__nav-button:hover {
-    background-color: #FF7C00;
-    color: white;
-    border: 3px solid #FF7C00;
-    border-radius: 5px;
-}
-
-.header__emoji-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 23px; /* Tamaño del emoji */
-    color: #fff;
-}
-
-/* Estilos para el contenedor del botón de inicio de sesión y la foto de perfil */
-.header__login-container {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
-}
-
-/* Estilos para el botón de inicio de sesión */
-.header__login-button {
-    background-color: #4392da;
-    color: #ffffff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 20px;
-}
-
-/* Estilos para la foto de perfil */
-.header__profile-photo {
-    border-radius: 50%;
-    margin-left: 10px;
-    width: 60px;
-    height: 60px;
+#third-ranked{
+    background-color: #B87D34;
 }
