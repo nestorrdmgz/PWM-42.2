@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="043f4f49-772a-4362-97f7-4a272fbc6308" name="Changes" comment="Initial commit" />
+    <list default="true" id="043f4f49-772a-4362-97f7-4a272fbc6308" name="Changes" comment="Add match HTML file renamed">
+      <change afterPath="$PROJECT_DIR$/Images/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/logoFooterLetras.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/logoWebPrincipal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/twitterX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/footerStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/headerStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/header_sin_login_modelado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/header_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +34,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;imanolqb&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c27b7d71-8069-4730-ae3f-0b88eb9040c9" />
+        <option name="url" value="https://github.com/nestorrdmgz/PWM-42.2.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -36,12 +63,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.header_login.html.executor": "Run",
     "JavaScript Debug.menu.html.executor": "Run",
     "JavaScript Debug.sign_in.html.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/nesto/OneDrive/Escritorio/PWM",
+    "last_opened_file_path": "C:/Users/imano/WebstormProjects/PWM-42.2/Images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -51,6 +79,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\imano\WebstormProjects\PWM-42.2\Images" />
+      <recent name="C:\Users\imano\WebstormProjects\PWM-42.2\Templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\imano\WebstormProjects\PWM-42.2\Templates" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,6 +107,8 @@
       <workItem from="1708348564406" duration="647000" />
       <workItem from="1708367314300" duration="41000" />
       <workItem from="1708938126268" duration="2493000" />
+      <workItem from="1708941878416" duration="285000" />
+      <workItem from="1708979955111" duration="8778000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -79,7 +118,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708940337210</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add match HTML file created">
+      <option name="closed" value="true" />
+      <created>1708941968431</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708941968431</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add match HTML file renamed">
+      <option name="closed" value="true" />
+      <created>1708942045635</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708942045635</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +180,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Add match HTML file created" />
+    <MESSAGE value="Add match HTML file renamed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add match HTML file renamed" />
   </component>
 </project>

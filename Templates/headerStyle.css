@@ -1,12 +1,13 @@
 /* Estilos para el encabezado */
 .header {
-    height: 265px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     background-color: #ffffff;
     font-family: "Arial", sans-serif;
+    font-weight: bold; /* Establecer el texto en negrita */
     background-image: url('https://images.unsplash.com/photo-1587960184060-aa880aabdd04?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxiYXNrZXRiYWxsfGVufDB8fHx8MTcwODM4MzE4NHww&ixlib=rb-4.0.3&w=1600');
 }
 
@@ -17,27 +18,29 @@
 }
 
 .header__logo {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
 }
 
 /* Estilos para el nav */
 .header__nav {
     flex-grow: 1;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .header__nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
 }
 
 .header__nav li {
-    display: inline-block;
+    text-align: center; /* Alinea el texto horizontalmente */
     margin-right: 40px;
-    width: 120px; /* Ancho deseado */
-    height: 40px; /* Altura deseada */
 }
 
 .header__nav li:last-child {
@@ -53,9 +56,9 @@
     text-decoration: none;
     font-size: 16px;
     padding: 8px 16px;
-    width: 100%; /* Ocupar todo el ancho del contenedor */
     height: 100%; /* Ocupar todo el alto del contenedor */
     line-height: 40px; /* Alinear verticalmente el texto */
+    flex-basis: 20%; /* Ancho igual para todos los elementos */
 }
 
 .header__nav-button:hover {
