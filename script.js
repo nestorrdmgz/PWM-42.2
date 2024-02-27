@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', async function() {
     await cargarEstructura();
-    // Dado que cargarEstructura es async, ahora puedes asegurarte de que todo ha cargado
     cargarContenidoDinamico();
 });
 
