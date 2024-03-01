@@ -1,6 +1,14 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Estilos para el encabezado */
 .header {
-    height: 200px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,27 +32,40 @@
 }
 
 /* Estilos para el nav */
-.header__nav {
+.navbar {
     flex-grow: 1;
     align-items: center;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
+    overflow: auto;
 }
 
-.header__nav ul {
+.navbar a {
+    float: left;
+    padding: 0 12px;
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    color: #FF7C00;
+    text-decoration: none;
+    font-size: 17px;
+    width: 20%; /* Four links of equal widths */
+    height: 100%;
+    text-align: center;
+}
+
+.navbar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex; /* Alinea los elementos de la lista horizontalmente */
 }
 
-.header__nav li {
-    text-align: center; /* Alinea el texto horizontalmente */
-    margin-right: 40px;
+.navbar a:hover {
+    background-color: #FF7C00;
 }
 
-.header__nav li:last-child {
-    margin-right: 0;
+.navbar a.active {
+    background-color: #FF7C00;
 }
 
 .header__nav-button {
@@ -68,6 +89,15 @@
     border-radius: 5px;
 }
 
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
 .header__emoji-button {
     background-color: transparent;
     border: none;
@@ -87,7 +117,7 @@
     background-color: #4392da;
     color: #ffffff;
     border: none;
-    padding: 8px 16px;
+    padding: 8px 40px;
     border-radius: 3px;
     cursor: pointer;
     margin-left: 20px;
