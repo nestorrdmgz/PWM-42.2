@@ -1,0 +1,22 @@
+.location-container {
+    border: 2px solid #FF7C00; /* Borde naranja */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 200px; /* Longitud específica */
+    flex-grow: 1;
+    background-color: white;
+}
+
+.texto-location {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #FF7C00; /* Color naranja */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagen-location {
+    width: 20px; /* Ajusta el tamaño de la imagen según lo necesites */
+    height: auto;
+}
