@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Definición de los partidos, equipos y jugadores</title>
+    <link rel="stylesheet" href="matches.css">
+</head>
+<body>
+<div class="matches-container">
+    <div class="match-details">
+        <h1 class="texto-titulo-partido">Lore ipsum - 3X3</h1>
+        <div class="location-container"></div>
+        <h3 class="fecha-y-hora-db"></h3>
+    </div>
+    <div class="match-teams">
+        <div class="teamA-container">
+            <span class="texto-filtro">EQUIPO A</span>
+            <div class="user-container"></div>
+            <div class="user-container"></div>
+            <div class="addUser-container"></div>
+        </div>
+        <div class="teamB-container">
+            <span class="texto-filtro">EQUIPO B</span>
+            <div class="user-container"></div>
+            <div class="addUser-container"></div>
+            <div class="addUser-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    fetch("user-viewport.html")
+        .then(response => response.text())
+        .then(html => {
+            document.querySelectorAll(".user-container").forEach(container => {
+                container.innerHTML = html;
+            });
+        });
+
+    fetch("addUser-viewport.html")
+        .then(response => response.text())
+        .then(html => {
+            document.querySelectorAll(".addUser-container").forEach(container => {
+                container.innerHTML = html;
+            });
+        });
+
+    // Cargar el componente de filtros utilizando JavaScript
+    fetch("location.html")
+        .then(response => response.text())
+        .then(html => {
+            document.querySelectorAll(".location-container").forEach(container => {
+                container.innerHTML = html;
+            });
+        });
+
+    // Supongamos que fechaHoraDB es una variable que contiene la fecha y hora de la base de datos
+    var fechaHoraDB = "2024-03-02, 12:30"; // Formato ISO 8601 (yyyy-mm-ddThh:mm)
+    // Obtener el elemento de párrafo por su clase
+    var pFechaHora = document.querySelectorAll(".fecha-y-hora-db");
+    // Asignar el valor de fechaHoraDB al párrafo
+    pFechaHora.forEach(p => {
+        p.textContent = "Fecha: " + fechaHoraDB;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CourtLink: Mejores Jugadores</title>
+    <link rel="stylesheet" href="templates/header.css">
+    <link rel="stylesheet" href="templates/footer.css">
+    <link rel="stylesheet" href="matchesPage.css">
+    <link rel="stylesheet" href="components/filtro.css">
+    <link rel="stylesheet" href="components/addMatchComponent.css">
+</head>
+<body>
+<div id="header"></div>
+<div id="contenido">
+    <div class="resultados-filtro">
+        <h2>Todos los resultados</h2>
+        <div id="plus-container"></div>
+        <div id="filtro-container"></div>
+    </div>
+    <div class="separador"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div id="footer"></div>
+<script src="scripts/loadHeaderFooter.js"></script>
+<script>
+    // Cargar el componente de filtros utilizando JavaScript
+    fetch("components/filtro.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("filtro-container").innerHTML = html;
+        });
+
+    // Cargar el componente de añadir partido utilizando JavaScript
+    fetch("components/addMatchComponent.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("plus-container").innerHTML = html;
+        });
+</script>
+</body>
+</html>
