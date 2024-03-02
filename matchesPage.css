@@ -1,0 +1,26 @@
+/* Estilo para la línea de separación */
+.separador {
+    border-bottom: 3px solid #FF7C00; /* Línea naranja */
+    margin-bottom: 20px; /* Espacio entre la línea y el contenido */
+}
+
+.resultados-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    color: #FF7C00; /* Color naranja */
+    margin-top: 20px; /* Ajusta el valor según sea necesario */
+    justify-content: center; /* Centra verticalmente en el contenedor */
+}
+
+#filtro-container {
+    width: 80px; /* Ancho específico para el componente de filtro */
+    margin-left: auto; /* Empuja el componente de filtro hacia la derecha */
+    margin-right: 40px; /* Espacio entre el componente de filtros y el contenido */
+}
+
+#plus-container {
+    width: 80px; /* Ancho específico para el componente de filtro */
+    margin-left: auto; /* Empuja el componente de filtro hacia la derecha */
+    margin-right: 40px; /* Espacio entre el componente de filtros y el contenido */
+}
