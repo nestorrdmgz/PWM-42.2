@@ -1,119 +1,42 @@
-* {
-    box-sizing: border-box
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Estilos para el encabezado */
 .header {
-    height: 250px;
+    height: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 10px 20px;
-    background-color: #ffffff;
     font-family: "Arial", sans-serif;
-    font-weight: bold; /* Establecer el texto en negrita */
-    background-image: url('https://images.unsplash.com/photo-1587960184060-aa880aabdd04?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxiYXNrZXRiYWxsfGVufDB8fHx8MTcwODM4MzE4NHww&ixlib=rb-4.0.3&w=1600');
-}
-
-/* Estilos para el logo */
-.header__logo-container {
-    flex-grow: 1;
-    text-align: left;
+    font-weight: bold;
+    background-image: url("../images/header_background.jpg");
 }
 
 .header__logo {
     width: 140px;
     height: 140px;
-    object-fit: cover;
 }
 
-/* Estilos para el nav */
 .navbar {
-    flex-grow: 1;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
     width: 100%;
-    overflow: auto;
 }
 
-.navbar a {
+.header_nav_button {
     float: left;
-    padding: 0 12px;
-    box-sizing: border-box; /* Incluir el padding en el ancho total */
-    color: #FF7C00;
-    text-decoration: none;
-    font-size: 17px;
-    width: 20%; /* Four links of equal widths */
-    height: 100%;
-    text-align: center;
-}
-
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Alinea los elementos de la lista horizontalmente */
-}
-
-.navbar a:hover {
-    background-color: #FF7C00;
-}
-
-.navbar a.active {
-    background-color: #FF7C00;
-}
-
-.header__nav-button {
+    width: 20%;
     background-color: white;
-    cursor: pointer;
+    box-sizing: border-box;
     color: #FF7C00;
-    border: 3px solid #FF7C00; /* Definir el grosor y color del borde */
-    border-radius: 5px;
+    border: 3px solid #FF7C00;
     text-decoration: none;
-    font-size: 16px;
-    padding: 8px 16px;
-    height: 100%; /* Ocupar todo el alto del contenedor */
-    line-height: 40px; /* Alinear verticalmente el texto */
-    flex-basis: 20%; /* Ancho igual para todos los elementos */
+    text-align: center;
+    border-radius: 5px;
+    line-height: 40px;
 }
 
-.header__nav-button:hover {
+.header_nav_button:hover {
     background-color: #FF7C00;
     color: white;
     border: 3px solid #FF7C00;
-    border-radius: 5px;
 }
 
-@media screen and (max-width: 500px) {
-    .navbar a {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-}
-
-.header__emoji-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 23px; /* Tamaño del emoji */
-    color: #fff;
-}
-
-/* Estilos para el contenedor del botón de inicio de sesión y la foto de perfil */
-.header__login-container {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
-}
-
-/* Estilos para el botón de inicio de sesión */
-.header__login-button {
+.header_login_button {
     background-color: #4392da;
     color: #ffffff;
     border: none;
@@ -123,10 +46,3 @@ body {
     margin-left: 20px;
 }
 
-/* Estilos para la foto de perfil */
-.header__profile-photo {
-    border-radius: 50%;
-    margin-left: 10px;
-    width: 60px;
-    height: 60px;
-}
