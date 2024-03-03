@@ -43,6 +43,7 @@ body {
 
 .navbar a {
     float: left;
+    margin-right: 5px;
     padding: 0 12px;
     box-sizing: border-box; /* Incluir el padding en el ancho total */
     color: #FF7C00;
