@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Definición de los partidos, equipos y jugadores</title>
-    <link rel="stylesheet" href="matches.css">
+    <link rel="stylesheet" href="match_details.css">
 </head>
 <body>
 <div class="matches-container">
@@ -28,7 +28,7 @@
     </div>
 </div>
 <script>
-    fetch("user-viewport.html")
+    fetch("user_viewport.html")
         .then(response => response.text())
         .then(html => {
             document.querySelectorAll(".user-container").forEach(container => {
@@ -36,7 +36,7 @@
             });
         });
 
-    fetch("addUser-viewport.html")
+    fetch("add_user_viewport.html")
         .then(response => response.text())
         .then(html => {
             document.querySelectorAll(".addUser-container").forEach(container => {
@@ -45,7 +45,7 @@
         });
 
     // Cargar el componente de filtros utilizando JavaScript
-    fetch("location.html")
+    fetch("match_location.html")
         .then(response => response.text())
         .then(html => {
             document.querySelectorAll(".location-container").forEach(container => {

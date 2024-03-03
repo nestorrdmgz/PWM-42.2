@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="templates/footer.css">
     <link rel="stylesheet" href="matchesPage.css">
     <link rel="stylesheet" href="components/filtro.css">
-    <link rel="stylesheet" href="components/addMatchComponent.css">
-    <link rel="stylesheet" href="components/addUser-viewport.css">
-    <link rel="stylesheet" href="components/location.css">
-    <link rel="stylesheet" href="components/user-viewport.css">
+    <link rel="stylesheet" href="components/add_match.css">
+    <link rel="stylesheet" href="components/add_user_viewport.css">
+    <link rel="stylesheet" href="components/match_location.css">
+    <link rel="stylesheet" href="components/user_viewport.css">
 </head>
 <body>
 <div id="header"></div>
@@ -35,13 +35,13 @@
         });
 
     // Cargar el componente de añadir partido utilizando JavaScript
-    fetch("components/addMatchComponent.html")
+    fetch("components/add_match.html")
         .then(response => response.text())
         .then(html => {
             document.getElementById("plus-container").innerHTML = html;
         });
 
-    // Cargar el contenido de matches.html en el contenedor match-container
+    // Cargar el contenido de match_details.html en el contenedor match-container
     fetch("components/matches2.html")
         .then(response => response.text())
         .then(html => {
