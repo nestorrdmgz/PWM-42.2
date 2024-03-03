@@ -37,15 +37,26 @@ img {
     background-color: #B87D34;
 }
 .contenido_terminos_condiciones {
-
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
 }
 .title_terminos_condiciones {
     color: #FF7C00;
     text-align: center;
+
+    border: 4px solid #FF7C00;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.presentacion_terminos_condiciones {
+    font-size: 16px;
 }
 .apartado_terminos_condiciones {
-
+    font-size: 18px;
 }
 .seccion_terminos_condiciones {
-
+    font-size: 14px;
+    padding-left: 40px; /* Agregar sangría alrededor del contenido */
 }
