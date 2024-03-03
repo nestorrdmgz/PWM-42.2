@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="templates/header.css">
     <link rel="stylesheet" href="templates/footer.css">
     <link rel="stylesheet" href="matchesPage.css">
-    <link rel="stylesheet" href="components/filtro.css">
-    <link rel="stylesheet" href="components/add_match.css">
+    <link rel="stylesheet" href="components/filter_button.css">
+    <link rel="stylesheet" href="components/add_match_button.css">
     <link rel="stylesheet" href="components/add_user_viewport.css">
     <link rel="stylesheet" href="components/match_location.css">
     <link rel="stylesheet" href="components/user_viewport.css">
@@ -28,14 +28,14 @@
 <script src="scripts/loadHeaderFooter.js"></script>
 <script>
     // Cargar el componente de filtros utilizando JavaScript
-    fetch("components/filtro.html")
+    fetch("components/filter_button.html")
         .then(response => response.text())
         .then(html => {
             document.getElementById("filtro-container").innerHTML = html;
         });
 
     // Cargar el componente de añadir partido utilizando JavaScript
-    fetch("components/add_match.html")
+    fetch("components/add_match_button.html")
         .then(response => response.text())
         .then(html => {
             document.getElementById("plus-container").innerHTML = html;

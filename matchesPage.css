@@ -16,11 +16,10 @@
 #filtro-container {
     width: 80px; /* Ancho específico para el componente de filtro */
     margin-left: auto; /* Empuja el componente de filtro hacia la derecha */
-    margin-right: 40px; /* Espacio entre el componente de filtros y el contenido */
+    margin-right: 70px; /* Espacio entre el componente de filtros y el contenido */
 }
 
 #plus-container {
-    width: 80px; /* Ancho específico para el componente de filtro */
     margin-left: auto; /* Empuja el componente de filtro hacia la derecha */
     margin-right: 40px; /* Espacio entre el componente de filtros y el contenido */
 }

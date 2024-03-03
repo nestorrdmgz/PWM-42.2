@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtro</title>
+    <link rel="stylesheet" href="filter_button.css">
+</head>
+<body>
+<button id="filter-button" class="button">Filtros</button>
+<div id="filter-container" class="filters">
+    <ul class="filters__list">
+        <li>
+            <input id="f1" type="checkbox"/>
+            <label for="f1">1 contra 1</label>
+        </li>
+        <li>
+            <input id="f2" type="checkbox"/>
+            <label for="f2">2 contra 2</label>
+        </li>
+        <li>
+            <input id="f3" type="checkbox"/>
+            <label for="f3">3 contra 3</label>
+        </li>
+        <li>
+            <input id="f4" type="checkbox"/>
+            <label for="f4">4 contra 4</label>
+        </li>
+        <li>
+            <input id="f5" type="checkbox"/>
+            <label for="f5">5 contra 5</label>
+        </li>
+        <li>
+            <label for="f6">Fecha</label>
+            <input id="f6" type="date"/>
+        </li>
+    </ul>
+</div>
+<script>
+    var button = document.getElementById("filter-button");
+    var container = document.getElementById("filter-container");
+    var input = document.querySelectorAll("input");
+
+    button.onclick = function (e) {
+        e.stopPropagation();
+        if (container.classList.contains("filters--active")) {
+            container.classList.remove("filters--active");
+        } else {
+            container.classList.add("filters--active");
+        }
+    };
+
+    container.onclick = function (e) {
+        e.stopPropagation();
+    };
+
+    window.onclick = function () {
+        container.classList.remove("filters--active");
+    };
+
+    console.log(input);
+
+    for (var i = 0; i < input.length; i++) {
+        var currentInput = input[i];
+
+        currentInput.onclick = function () {
+            var isChecked = false;
+            for (var j = 0; j < input.length; j++) {
+                if (input[j].checked) {
+                    isChecked = true;
+                    break;
+                }
+            }
+
+            if (isChecked) {
+                button.id.add("filter-button--highlight");
+            } else {
+                button.id.remove("filter-button--highlight");
+            }
+        };
+    }
+</script>
+</body>
+</html>
