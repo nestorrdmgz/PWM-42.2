@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Court Link: Canchas</title>
     <link rel="stylesheet" href="templates/header.css">
     <link rel="stylesheet" href="templates/footer.css">
 </head>
 <body>
-<header class="header">
-    <img src="/images/logoWebPrincipal.png" alt="Login" class="header__logo">
-    <nav class="navbar">
-        <a href="#" class="header_nav_button">INICIO</a>
-        <a href="#" class="header_nav_button">PARTIDOS</a>
-        <a href="#" class="header_nav_button">CANCHAS</a>
-        <a href="#" class="header_nav_button">MVPs</a>
-        <a href="#" class="header_nav_button">NOSOTROS</a>
-    </nav>
-    <button class="header_login_button">INICIAR SESIÓN</button>
-</header>
 
+<div id="header-container"></div>
 
+<div id="footer-container"></div>
+
+<script src="scripts/script.js"></script>
+<script>
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function() {
+        loadHeader();
+        loadFooter();
+    });
+</script>
 </body>
 </html>
