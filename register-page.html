@@ -3,32 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Regístrate</title>
-    <link rel="stylesheet" href="login_page.css">
+    <link rel="stylesheet" href="register_page.css">
 </head>
 <body>
-<div class="login-page-container">
+<div class="register-page-container">
     <img alt="image" src="images/logoLogin.png" class="logo-login"/>
     <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
-    <form class="login-page-form">
-        <span class="login-text">INICIA SESIÓN</span>
-        <div class="login-page-inputs">
+    <form class="register-page-form">
+        <span class="register-text">REGÍSTRATE</span>
+        <div class="register-page-inputs">
+            <label>
+                <input
+                        type="text"
+                        placeholder="Nombre"
+                        class="register-page-nameinput input"
+                />
+            </label>
+            <label>
+                <input
+                        type="text"
+                        placeholder="Apellidos"
+                        class="register-page-surnameinput input"
+                />
+            </label>
             <label>
                 <input
                         type="email"
                         placeholder="Correo electrónico"
-                        class="login-page-mailinput input"
+                        class="register-page-mailinput input"
                 />
             </label>
             <label>
                 <input
                         type="password"
                         placeholder="Contraseña"
-                        class="login-page-passwdinput input"
+                        class="register-page-passwdinput input"
                 />
             </label>
-            <button type="button" class="login-button button">LOGIN</button>
-            <span class="login-question">¿No tienes cuenta todavía?</span>
-            <a href="register-page.html" class="login-page-navlink">Regístrate</a>
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms-checkbox" class="terms-checkbox">
+                <label for="terms-checkbox" class="terms-label">He leído y acepto los <a href="terms_and_conditions.html">términos y condiciones</a></label>
+            </div>
+            <button type="button" class="register-button button">SIGN UP</button>
+            <span class="register-question">¿Tienes cuenta?</span>
+            <a href="login_page.html" class="register-page-navlink">Inicia sesión</a>
         </div>
     </form>
 </div>
