@@ -1,41 +1,19 @@
-document.addEventListener('DOMContentLoaded', async function() {
-    await cargarEstructura();
-    cargarContenidoDinamico();
-});
-
-async function cargarEstructura() {
-    let appDiv = document.getElementById('mejores_jugadores');
-
-    // Cargar estructura estática
-    appDiv.appendChild(await cargarTemplate('templates/header.html'));
-    appDiv.appendChild(await cargarTemplate('templates/ranking.html'));
-    appDiv.appendChild(await cargarTemplate('templates/footer.html'));
-}
-
-async function cargarTemplate(url) {
-    let response = await fetch(url);
-    let text = await response.text();
-
-    let template = document.createElement('template');
-    template.innerHTML = text;
-    return document.importNode(template.content, true);
-}
-
-function cargarContenidoDinamico() {
-    // Ahora esta función no recibe mainContent, ya que buscará en el DOM actualizado
-    fetch('data/content.json')
-        .then(response => response.json())
-        .then(data => {
-            let dynamicContentSection = document.querySelector('#dynamicContent');
-            if (!dynamicContentSection) {
-                console.error('No se encontró #dynamicContent en el DOM');
-                return;
-            }
-            data.forEach(item => {
-                let article = document.createElement('article');
-                article.innerHTML = `<h2>${item.title}</h2><p>${item.description}</p>`;
-                dynamicContentSection.appendChild(article);
-            });
+// Función para cargar el header
+function loadHeader() {
+    fetch('templates/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => console.error('Error cargando el header:', error));
+}
+
+// Función para cargar el footer
+function loadFooter() {
+    fetch('templates/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error cargando el footer:', error));
 }
