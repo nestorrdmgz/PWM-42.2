@@ -114,6 +114,8 @@ body {
 
 /* Estilos para el botón de inicio de sesión */
 .header__login-button {
+    width: 160px;
+    height: 40px;
     background-color: #4392da;
     color: #ffffff;
     border: none;
