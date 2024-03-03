@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="matchesPage.css">
     <link rel="stylesheet" href="components/filtro.css">
     <link rel="stylesheet" href="components/addMatchComponent.css">
+    <link rel="stylesheet" href="components/addUser-viewport.css">
+    <link rel="stylesheet" href="components/location.css">
+    <link rel="stylesheet" href="components/user-viewport.css">
 </head>
 <body>
 <div id="header"></div>
@@ -19,6 +22,7 @@
     </div>
     <div class="separador"></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="match-container"></div>
 </div>
 <div id="footer"></div>
 <script src="scripts/loadHeaderFooter.js"></script>
@@ -35,6 +39,13 @@
         .then(response => response.text())
         .then(html => {
             document.getElementById("plus-container").innerHTML = html;
+        });
+
+    // Cargar el contenido de matches.html en el contenedor match-container
+    fetch("components/matches2.html")
+        .then(response => response.text())
+        .then(html => {
+            document.querySelector(".match-container").innerHTML = html;
         });
 </script>
 </body>
