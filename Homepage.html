@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Homepage.css">
+</head>
+<body>
+<main class="container">
+    <iframe class="header" src="header.html"></iframe>
+    <section class="section">
+        <h1 class="section__h1">Encuentra partidos cerca de ti</h1>
+        <form>
+            <input type="number" id="código_postal" class="section__form" placeholder="Código postal">
+        </form>
+        <select class="section__select">
+            <option value="modalidad" selected>Modalidad</option>
+            <option value="opcion1">1x1</option>
+            <option value="opcion2">2x2</option>
+            <option value="opcion2">3x3</option>
+            <option value="opcion2">4x4</option>
+            <option value="opcion3">5x5</option>
+        </select>
+        <form>
+            <input class="section__form"
+                   type="datetime-local"
+                   id="meeting-time"
+                   name="meeting-time"/>
+        </form>
+        <button class="section_button">&#128269;</button>
+    </section>
+    <iframe class="footer" src="footer.html" frameborder="0"></iframe>
+</main>
+</body>
+</html>

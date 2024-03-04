@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 99.8% !important;
+    height: 250px !important;
+}
+
+.footer {
+    width: 99.8% !important;
+    height: 422px !important;
+}
+
+.main {
+    background-image: url("https://www.ultimatefan.com/wp-content/uploads/2023/05/image-2-2.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    text-align: center;
+    border: 2px solid orangered;
+    border-radius: 10%;
+    background-image: url("https://i.pinimg.com/originals/56/0d/1d/560d1d6dbf7120cd9e0b9bff5b7abe2e.jpg");
+    background-size: cover;
+    width: 80%;
+    height: 80%;
+    margin: 20% auto;
+}
+
+.card__image {
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 50%;
+    margin: 5% 0 1% 0;
+}
+
+.card form input {
+    margin: 10px 0;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los inputs de nombre y apellido */
+.card form input[type="text"] {
+    width: calc(30% - 5px);
+}
+
+/* Estilo para el input de correo electrónico */
+.card form input[type="email"] {
+    width: 40%;
+    margin-bottom: 15px;
+}
+
+.card form input[type="submit"] {
+    background-color: #4392da;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 5%;
+}
