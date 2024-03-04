@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Court Link: Perfil ajeno</title>
+    <link rel="stylesheet" href="templates/header.css">
+    <link rel="stylesheet" href="templates/footer.css">
+    <link rel="stylesheet" href="profile_page.css">
+    <link rel="stylesheet" href="components/cancha_favorita.css">
+</head>
+<body>
+<header id="header-container"></header>
+
+<main>
+    <section class="left-column">
+        <div>
+            <img alt="Foto de perfil" class="foto-perfil"
+                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
+            <h1 class="nombre-usuario">Nombre de usuario</h1>
+        </div>
+    </section>
+
+    <section class="right-column">
+        <article class="container">
+            <ul class="container-ul">
+                <li>
+                    <p>100</p>
+                    <p>Seguidores</p>
+                </li>
+                <li>
+                    <p>100</p>
+                    <p>Siguiendo</p>
+                </li>
+                <li>
+                    <p>100</p>
+                    <p>Partidos jugados</p>
+                </li>
+            </ul>
+        </article>
+        <article class="datos-personales">
+            <ul>
+                <li>Nombre: Pedro Ramos Martinez</li>
+                <li>Altura: 185cm</li>
+                <li>Localidad: Las Palmas de Gran Canaria</li>
+            </ul>
+            <ul>
+                <li>Categoría: Aficionado</li>
+                <li>Posición: Alero</li>
+                <li>Nacionalidad: Española</li>
+            </ul>
+        </article>
+        <article>
+            <h1 class="titulo-article">CANCHAS FAVORITAS</h1>
+            <div class="linea-horizontal"></div>
+            <div id="cancha_fa"></div>
+        </article>
+    </section>
+</main>
+
+<footer id="footer-container"></footer>
+
+<script src="scripts/header_footer.js"></script>
+<script>
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function () {
+        loadHeader();
+        loadFooter();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    font-family: "Arial", sans-serif;
+}
+
+.right-column, .left-column {
+    height: 100vh;
+}
+
+.left-column {
+    flex: 1;
+    text-align: center;
+}
+
+.right-column {
+    flex: 2;
+    background-color: #e0e0e0;
+}
+.foto-perfil {
+    margin-top: 40%;
+    border-radius: 50%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.nombre-usuario {
+    font-weight: bold;
+}
+
+.container-ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.container-ul li {
+    text-align: center;
+    margin: 130px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff5c1f;
+}
+
+.container-ul li:last-child {
+    margin-right: 0;
+}
+
+.datos-personales {
+    display: flex;
+    justify-content: center;
+}
+
+.datos-personales ul {
+    list-style-type: none;
+    margin: 30px 300px 0 0;
+    font-weight: bold;
+}
+
+.datos-personales ul:last-child {
+    margin-right: 0;
+}
+
+.datos-personales ul li {
+    margin-bottom: 30px;
+}
+
+.datos-personales ul li:last-child {
+    margin-bottom: 0;
+}
+
+.titulo-article {
+    margin: 60px 0 0 30px;
+    color: dodgerblue;
+}
+
+.linea-horizontal {
+    width: 95%; /* Ajusta el ancho al 100% del contenedor */
+    height: 2px; /* Altura de la línea */
+    background-color: #4392da; /* Color de la línea */
+    margin-left: 30px;
+}
