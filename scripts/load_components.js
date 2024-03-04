@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    await cargarEstructura('header');
-    await cargarEstructura('footer');
     await cargarEstructura('match_details');
     cargarContenidoDinamico();
 });
@@ -17,12 +15,6 @@ async function cargarEstructura(id) {
     let templateURL;
     switch (id) {
         case 'header':
-            templateURL = 'templates/header.html';
-            break;
-        case 'footer':
-            templateURL = 'templates/footer.html';
-            break;
-        case 'match_details':
             templateURL = 'components/match_details.html';
             break;
         default:
