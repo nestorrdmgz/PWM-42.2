@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="templates/footer.css">
 </head>
 <body>
-<div id="header"></div>
+<header id="header-container"></header>
 <div class="nosotros-contenido">
     <h1 class="title_terminos_condiciones">NOSOTROS: QUIÉNES SOMOS</h1>
     <div class="nosotros-primer-recuadro">
@@ -61,7 +61,7 @@
                   de una red de aficionados cercanos.
                 </span>
                 <div class="home-container07">
-                    <a href="canchas.html" class="home-navlink">
+                    <a href="canchas_page.html" class="home-navlink">
                         Descubre canchas a tu alrededor &#8594;
                     </a>
                 </div>
@@ -72,7 +72,7 @@
         <div class="blog-post-card">
             <img
                     alt="image"
-                    src="images/disfruta_nosotros.jpg"
+                    src="images/mapa.jpg"
                     class="nosotros-image-3"
             />
             <div class="texto-recuadro">
@@ -96,7 +96,14 @@
         </div>
     </div>
 </div>
-<div id="footer"></div>
-<script src="scripts/loadHeaderFooter.js"></script>
+<footer id="footer-container"></footer>
+<script src="scripts/header_footer.js"></script>
+<script>
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function() {
+        loadHeader();
+        loadFooter();
+    });
+</script>
 </body>
 </html>

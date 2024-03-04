@@ -32,22 +32,20 @@
 
 .navbar a {
     float: left;
-    margin-right: 5px;
-    padding: 0 12px;
     box-sizing: border-box; /* Incluir el padding en el ancho total */
     color: #FF7C00;
     text-decoration: none;
     font-size: 17px;
-    width: 20%; /* Four links of equal widths */
+    width: 19%; /* Four links of equal widths */
     height: 100%;
     text-align: center;
-}
-
-.navbar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex; /* Alinea los elementos de la lista horizontalmente */
+    flex-basis: auto;
+    justify-content: center;
+    margin-right: 5px;
 }
 
 .navbar a:hover {

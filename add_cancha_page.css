@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"]{
+    width: calc(100% - 20px); /* Ajusta el ancho para dejar espacio para el checkbox */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    vertical-align:middle;
+    display: inline-block;
+}
+label{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+input[type="checkbox"]{
+    position: relative;
+    bottom: 7px;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff7c00; /* Temática de color naranja */
+    color: #fff; /* Texto en color blanco */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #e65a00; /* Color naranja más oscuro al pasar el ratón */
+}
+#footer-container{
+    position: fixed;
+    bottom: 0;
+}

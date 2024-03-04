@@ -1,0 +1,50 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Arial", sans-serif;
+    margin-top: 25px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+.profile_picture{
+    height: 75px;
+    width: 75px;
+}
+#first_ranked{
+    background-color: #CBB809;
+}
+#second-ranked{
+    background-color: #A2C7DC;
+}
+#third-ranked{
+    background-color: #B87D34;
+}
+/* Estilo para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /
+}
+
+/* Estilo para el contenido de la página */
+main {
+    flex: 1;
+    overflow-y: auto; /* Añade una barra de desplazamiento vertical si el contenido es demasiado largo */
+}

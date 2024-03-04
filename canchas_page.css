@@ -1,0 +1,33 @@
+#add_cancha_button {
+    width: 20%;
+    background-color: white;
+    color: #FF7C00;
+    border: 3px solid #FF7C00;
+    border-radius: 5px;
+    line-height: 40px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    margin: auto; /* Centra el botón horizontalmente */
+    display: block;
+}
+
+#add_cancha_button:hover{
+    background-color: #FF7C00;
+    color: white;
+    border: 3px solid #FF7C00;
+}
+
+.image-container {
+    text-align: center; /* Centra la imagen y el botón horizontalmente */
+    margin-bottom: 20px; /* Añade margen inferior entre la imagen y el botón */
+}
+
+img {
+    display: block;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+}
+main{
+    background-color: grey;
+}
