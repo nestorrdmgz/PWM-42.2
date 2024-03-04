@@ -4,20 +4,13 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #fcfcfc;
-}
-
 footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
+    align-items: center;
+    justify-content: space-between;
     background: #111;
     height: auto;
-    width: 100vw;
     font-family: "Arial", sans-serif;
     font-weight: bold;
-    padding-top: 40px;
     color: #ff7c00;
 }
 
@@ -26,14 +19,23 @@ footer {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    height: 200px;
     padding: 0 20px; /* Ajustar el espaciado lateral */
 }
-
-.logo {
-    width: 100px; /* Ajusta el tamaño según tu diseño */
-    height: auto;
+.footer-image-container {
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección a columna */
+    align-items: flex-start; /* Centramos los elementos horizontalmente */
 }
-
+.logo {
+    width: 180px; /* Ajusta el tamaño según tu diseño */
+    height: auto;
+    margin-bottom: 10px; /* Ajustamos el margen inferior */
+}
+.footer-lema {
+    margin-top: 10px; /* Ajustamos el margen superior */
+    text-align: left;
+}
 .socials {
     list-style: none;
     display: flex;
@@ -79,7 +81,6 @@ footer {
 
 .footer-bottom {
     background: #000;
-    width: 100vw;
     padding: 20px 0;
     text-align: center;
 }
