@@ -6,46 +6,29 @@
     <link rel="stylesheet" href="templates/header.css">
     <link rel="stylesheet" href="templates/footer.css">
     <link rel="stylesheet" href="partidos_page.css">
-    <link rel="stylesheet" href="components/filter_button.css">
     <link rel="stylesheet" href="components/add_match_button.css">
-    <link rel="stylesheet" href="components/add_user_viewport.css">
-    <link rel="stylesheet" href="components/match_location.css">
-    <link rel="stylesheet" href="components/user_viewport.css">
+    <link rel="stylesheet" href="components/filter_button.css">
 </head>
 <body>
-<div id="header"></div>
+<header id="header-container"></header>
 <div id="contenido">
-    <div class="resultados-filtro">
-        <h2>Todos los resultados</h2>
-        <div id="plus-container"></div>
-        <div id="filtro-container"></div>
+    <h1 class="title_partidos">TODOS LOS PARTIDOS</h1>
+    <div class="botones">
+        <div id="add_match"></div>
+        <div id="filter-button"></div>
     </div>
-    <div class="separador"></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <div class="match-container"></div>
 </div>
-<div id="match-container"></div>
-<div id="footer"></div>
+<footer id="footer-container"></footer>
 <script src="scripts/header_footer.js"></script>
+<script src="scripts/components.js"></script>
 <script>
+    // Llama a las funciones de carga cuando se carga la página
     document.addEventListener('DOMContentLoaded', function() {
-        loadMatchDetails();
-
+        loadHeader();
+        loadFooter();
+        loadAddMatch();
+        loadFilterButton();
     });
-
-    // Cargar el componente de filtros utilizando JavaScript
-    fetch("components/filter_button.html")
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById("filtro-container").innerHTML = html;
-        });
-
-    // Cargar el componente de añadir partido utilizando JavaScript
-    fetch("components/add_match_button.html")
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById("plus-container").innerHTML = html;
-        });
 </script>
 </body>
 </html>
