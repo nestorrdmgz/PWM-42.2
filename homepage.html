@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Court Link: Homepage</title>
+    <link rel="stylesheet" href="templates/header.css">
+    <link rel="stylesheet" href="templates/footer.css">
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+<header id="header-container"></header>
+<main>
+    <section>
+        <article class="left">
+            <h1>Una nueva manera de entender el baloncesto</h1>
+            <div class="enlaces">
+                <a href="#">Registrate</a>
+                <a href="#">Quiénes somos</a>
+            </div>
+        </article>
+        <article class="right">
+            <h1>Encuentra basketlovers a tu alrededor</h1>
+            <form>
+                <input type="number" placeholder="Código postal">
+                <select id="opciones">
+                    <option value="1vs1">1 vs 1</option>
+                    <option value="2vs2">2 vs 2</option>
+                    <option value="3vs3">3 vs 3</option>
+                    <option value="4vs4">4 vs 4</option>
+                    <option value="5vs5">5 vs 5</option>
+                </select>
+                <input type="date">
+                <input type="submit" value="Buscar">
+            </form>
+        </article>
+    </section>
+</main>
+<footer id="footer-container"></footer>
+
+<script src="scripts/header_footer.js"></script>
+<script>
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function () {
+        loadHeader();
+        loadFooter();
+    });
+</script>
+</body>
+</html>
