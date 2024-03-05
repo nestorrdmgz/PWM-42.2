@@ -1,27 +1,15 @@
 /* Estilo para la línea de separación */
+.title_partidos {
+    color: #FF7C00;
+    text-align: center;
+    border: 4px solid #FF7C00;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 .separador {
     border-bottom: 3px solid #FF7C00; /* Línea naranja */
     margin-bottom: 20px; /* Espacio entre la línea y el contenido */
-}
-
-.resultados-filtro {
-    display: flex;
-    flex-wrap: wrap;
-    font-weight: bold;
-    color: #FF7C00; /* Color naranja */
-    margin-top: 20px; /* Ajusta el valor según sea necesario */
-    justify-content: center; /* Centra verticalmente en el contenedor */
-}
-
-#filtro-container {
-    width: 80px; /* Ancho específico para el componente de filtro */
-    margin-left: auto; /* Empuja el componente de filtro hacia la derecha */
-    margin-right: 70px; /* Espacio entre el componente de filtros y el contenido */
-}
-
-#plus-container {
-    margin-left: auto; /* Empuja el componente de filtro hacia la derecha */
-    margin-right: 40px; /* Espacio entre el componente de filtros y el contenido */
 }
 #contenido {
     font-family: Arial, Helvetica, sans-serif;
@@ -33,12 +21,4 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #D9D9D9;
-}
-.title_partidos {
-    color: #FF7C00;
-    text-align: center;
-    border: 4px solid #FF7C00;
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 20px;
 }

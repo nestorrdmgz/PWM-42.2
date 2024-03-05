@@ -1,11 +1,33 @@
-html {
-    box-sizing: border-box;
+body {
+    padding: 2em;
 }
-
-* {
-    box-sizing: inherit;
+#filter-button {
+    background: white;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    outline: 0;
+    text-align: left;
+    min-width: 150px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente el contenido */
+    color: #FF7C00;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #FF7C00; /* Borde naranja */
+    border-radius: 5px;
 }
-
+#filter-button::after {
+    content: "";
+    background-image: url('../images/plus-vector.png');
+    background-size: cover; /* Ajusta el tamaño de la imagen */
+    display: inline-block; /* Para que el pseudo-elemento tenga dimensiones */
+    width: 20px; /* Ancho deseado de la imagen */
+    height: 20px; /* Altura deseada de la imagen */
+    margin-left: 5px; /* Espacio entre el texto del botón y la imagen */
+}
 body {
     padding: 2em;
 }
@@ -37,7 +59,7 @@ li {
     color: #FF7C00;
 }
 
-.filters__list li {
+.filters-list li {
     display: flex;
     align-items: center;
     user-select: none;
@@ -45,7 +67,7 @@ li {
     line-height: 0;
 }
 
-.filters__list li:last-child {
+.filters-list li:last-child {
     padding-bottom: 0;
 }
 
@@ -67,23 +89,23 @@ input[type="checkbox"] {
     min-width: 150px;
     display: inline-flex;
     justify-content: space-between;
-    align-items: center; /* Centra verticalmente el contenido */
+    align-items: center;
     color: #FF7C00;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     cursor: pointer;
-    border: 2px solid #FF7C00; /* Borde naranja */
+    border: 2px solid #FF7C00;
     border-radius: 5px;
 }
 
 #filter-button::after {
-    content: "";
+    content: " ";
     background-image: url('../images/filtro-vector.png');
-    background-size: cover; /* Ajusta el tamaño de la imagen */
-    display: inline-block; /* Para que el pseudo-elemento tenga dimensiones */
-    width: 20px; /* Ancho deseado de la imagen */
-    height: 20px; /* Altura deseada de la imagen */
-    margin-left: 5px; /* Espacio entre el texto del botón y la imagen */
+    background-size: cover;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
 }
 
 #filter-button--highlight::after {
