@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="components/image_profile.css">
     <link rel="stylesheet" href="components/info_account.css">
     <link rel="stylesheet" href="components/personal_info.css">
+
 </head>
 <body>
 <header id="header-container"></header>
@@ -24,10 +25,28 @@
         <article>
             <div id="personal_info-container"></div>
         </article>
-        <article>
-            <h1 class="titulo-article">CANCHAS FAVORITAS</h1>
+        <article class="canchas">
+            <header class="canchas-header">
+                <h1 class="titulo-article">CANCHAS FAVORITAS</h1>
+                <a href="edit_profile.html">
+                    <button id="configurar_perfil" class="configurar_perfil">Configurar perfil</button>
+                </a>
+            </header>
             <div class="linea-horizontal"></div>
-            <div class="cancha_favorita" id="cancha_favorita"></div>
+            <ul class="canchas_favoritas">
+                <li>
+                    <p>Lorem ipsum</p>
+                    <p class="estrella">⭐</p>
+                </li>
+                <li>
+                    <p>Lorem ipsum</p>
+                    <p class="estrella">⭐</p>
+                </li>
+                <li>
+                    <p>Lorem ipsum</p>
+                    <p class="estrella">⭐</p>
+                </li>
+            </ul>
         </article>
     </section>
 </main>
@@ -40,7 +59,6 @@
     document.addEventListener('DOMContentLoaded', function () {
         loadHeader();
         loadFooter();
-        loadCancha_favorita();
         loadImage_profile()
         loadInfo_account()
         loadPersonal_info()

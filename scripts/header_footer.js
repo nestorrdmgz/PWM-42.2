@@ -17,15 +17,6 @@ function loadFooter() {
         .catch(error => console.error('Error cargando el footer:', error));
 }
 
-function loadCancha_favorita() {
-    fetch('components/cancha_favorita.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('cancha_favorita').innerHTML = html;
-        })
-        .catch(error => console.error('Error cargando el footer:', error));
-}
-
 function loadImage_profile() {
     fetch('components/image_profile.html')
         .then(response => response.text())
@@ -52,3 +43,4 @@ function loadPersonal_info() {
         })
         .catch(error => console.error('Error cargando el container:', error));
 }
+
