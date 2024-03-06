@@ -21,8 +21,8 @@ section {
 }
 
 .left {
-    width: 20%;
-    margin-left: 13%;
+    width: 400px;
+    margin-left: 250px;
 }
 
 
@@ -38,12 +38,12 @@ section {
 }
 
 .right {
-    height: 60vh;
+    height: 550px;
     background-color: #f1f1f1;
-    width: 30%;
+    width: 35%;
     text-align: center;
     border: 5px solid darkorange;
-    margin-right: 7%;
+    margin-right: 120px;
 }
 
 form {

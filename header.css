@@ -112,7 +112,7 @@
 }
 .header_profile_button::before {
     content: ""; /* Agrega este contenido vacío para que aparezca el ícono */
-    background-image: url('../images/user-icon.jpg');
+    background-image: url('images/user-icon.jpg');
     background-size: cover; /* Ajusta el tamaño de la imagen */
     display: inline-block; /* Para que el pseudo-elemento tenga dimensiones */
     margin-right: 5px; /* Ajusta el margen derecho para separar el ícono del texto */

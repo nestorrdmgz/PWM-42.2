@@ -4,7 +4,7 @@ main {
 }
 
 .right-column, .left-column {
-    height: 100vh;
+
 }
 
 .left-column {
@@ -80,7 +80,9 @@ main {
     justify-content: space-between;
 }
 
-
+.canchas_favoritas li:last-child {
+    margin-bottom: 45px;
+}
 .estrella {
     font-size: 30px;
     cursor: pointer;
