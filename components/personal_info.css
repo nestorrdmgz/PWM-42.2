@@ -1,0 +1,23 @@
+.datos-personales {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.datos-personales ul {
+    list-style-type: none;
+    margin: 0 300px 0 0;
+    font-weight: bold;
+}
+
+.datos-personales ul:last-child {
+    margin-right: 0;
+}
+
+.datos-personales ul li {
+    margin-bottom: 30px;
+}
+
+.datos-personales ul li:last-child {
+    margin-bottom: 0;
+}

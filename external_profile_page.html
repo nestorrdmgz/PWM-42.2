@@ -36,22 +36,25 @@
                 </li>
             </ul>
         </article>
-        <article class="datos-personales">
-            <ul>
-                <li>Nombre: Pedro Ramos Martinez</li>
-                <li>Altura: 185cm</li>
-                <li>Localidad: Las Palmas de Gran Canaria</li>
-            </ul>
-            <ul>
-                <li>Categoría: Aficionado</li>
-                <li>Posición: Alero</li>
-                <li>Nacionalidad: Española</li>
-            </ul>
+        <article class="información">
+            <button id="seguir_usuario" class="boton">Seguir</button>
+            <div class="datos-personales">
+                <ul>
+                    <li>Nombre: Pedro Ramos Martinez</li>
+                    <li>Altura: 185cm</li>
+                    <li>Localidad: Las Palmas de Gran Canaria</li>
+                </ul>
+                <ul>
+                    <li>Categoría: Aficionado</li>
+                    <li>Posición: Alero</li>
+                    <li>Nacionalidad: Española</li>
+                </ul>
+            </div>
         </article>
         <article>
             <h1 class="titulo-article">CANCHAS FAVORITAS</h1>
             <div class="linea-horizontal"></div>
-            <div id="cancha_favorita"></div>
+            <div class="cancha_favorita" id="cancha_favorita"></div>
         </article>
     </section>
 </main>
@@ -64,6 +67,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         loadHeader();
         loadFooter();
+        loadCancha_favorita();
     });
 </script>
 </body>

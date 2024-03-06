@@ -16,3 +16,39 @@ function loadFooter() {
         })
         .catch(error => console.error('Error cargando el footer:', error));
 }
+
+function loadCancha_favorita() {
+    fetch('components/cancha_favorita.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('cancha_favorita').innerHTML = html;
+        })
+        .catch(error => console.error('Error cargando el footer:', error));
+}
+
+function loadImage_profile() {
+    fetch('components/image_profile.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('image-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error cargando el container:', error));
+}
+
+function loadInfo_account() {
+    fetch('components/info_account.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('info_account-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error cargando el container:', error));
+}
+
+function loadPersonal_info() {
+    fetch('components/personal_info.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('personal_info-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error cargando el container:', error));
+}

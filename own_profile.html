@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Court Link: Perfil propio</title>
+    <link rel="stylesheet" href="templates/header.css">
+    <link rel="stylesheet" href="templates/footer.css">
+    <link rel="stylesheet" href="profile_page.css">
+    <link rel="stylesheet" href="components/image_profile.css">
+    <link rel="stylesheet" href="components/info_account.css">
+    <link rel="stylesheet" href="components/personal_info.css">
+</head>
+<body>
+<header id="header-container"></header>
+<main>
+    <section class="left-column">
+        <div id="image-container"></div>
+    </section>
+
+    <section class="right-column">
+        <article>
+            <div id="info_account-container"></div>
+        </article>
+        <article>
+            <div id="personal_info-container"></div>
+        </article>
+        <article>
+            <h1 class="titulo-article">CANCHAS FAVORITAS</h1>
+            <div class="linea-horizontal"></div>
+            <div class="cancha_favorita" id="cancha_favorita"></div>
+        </article>
+    </section>
+</main>
+
+<footer id="footer-container"></footer>
+
+<script src="scripts/header_footer.js"></script>
+<script>
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function () {
+        loadHeader();
+        loadFooter();
+        loadCancha_favorita();
+        loadImage_profile()
+        loadInfo_account()
+        loadPersonal_info()
+    });
+</script>
+</body>
+</html>
