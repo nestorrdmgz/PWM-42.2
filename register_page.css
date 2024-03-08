@@ -1,5 +1,6 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
+    color: white;
     margin: 0; /* Elimina el margen por defecto del body */
     padding: 0; /* Elimina el relleno por defecto del body */
     overflow: hidden; /* Evita la barra de desplazamiento horizontal */
@@ -17,7 +18,7 @@ body {
 }
 .logo-login {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-110%);
     left: 20px;
     width: 500px;
@@ -25,7 +26,7 @@ body {
 }
 .slogan {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-85%);
     left: 20px;
     color: #ffffff;
@@ -36,10 +37,10 @@ body {
     font-weight: bold;
 }
 .register-page-form {
-    top: 40px;
+    top: 30px;
     right: 106px;
     width: 655px;
-    height: 600px;
+    height: 640px;
     display: flex;
     position: absolute;
     align-items: center;
@@ -70,7 +71,7 @@ body {
     width: 420px;
     height: 40px;
     align-self: center;
-    margin-top: 24px;
+    margin-top: 8px;
     text-align: left;
     border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
     border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
@@ -88,7 +89,7 @@ body {
 .register-button {
     color: #ffffff;
     width: 166px;
-    height: 44px;
+    height: 50px;
     font-size: 18px;
     font-style: normal;
     margin-top: 32px;
@@ -115,6 +116,40 @@ body {
     font-style: normal;
     font-weight: 700;
     text-decoration: underline;
+}
+.island_and_place {
+    width: 500px; /* Ancho fijo */
+    align-self: center;
+    margin-top: 8px;
+    text-align: left;
+    padding: 10px;
+}
+#island {
+    width: 119px;
+    border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
+    border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
+    padding: 5px; /* Añade un espacio de relleno para separar el texto del borde */
+}
+#municipality {
+    width: 262px;
+    border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
+    border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
+    padding: 5px; /* Añade un espacio de relleno para separar el texto del borde */
+}
+.height_and_position {
+    margin-top: 8px;
+}
+#height {
+    width: 100px;
+    border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
+    border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
+    padding: 10px; /* Añade un espacio de relleno para separar el texto del borde */
+}
+#position {
+    width: 100px;
+    border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
+    border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
+    padding: 10px; /* Añade un espacio de relleno para separar el texto del borde */
 }
 @media(max-width: 1200px) {
     .register-button {

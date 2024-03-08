@@ -56,3 +56,62 @@
     margin-bottom: 10px; /* Agrega un margen en la parte inferior */
     margin-right: 10px; /* Agrega un margen a la derecha */
 }
+
+.boton-usuario,
+.anadirse-button {
+    border: 4px solid #FF7C00; /* Borde naranja */
+    margin-right: 5px;
+    padding: 20px;
+    width: 120px;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+.imagen-container {
+    position: relative; /* Posición relativa para superponer la línea */
+    margin-bottom: 10px;
+}
+
+.imagen {
+    width: 50px; /* Tamaño de la imagen */
+    height: auto;
+}
+
+.linea {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FF7C00;
+}
+
+.texto {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.location-container {
+    border: 2px solid #FF7C00; /* Borde naranja */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 200px; /* Longitud específica */
+    flex-grow: 1;
+    background-color: white;
+}
+
+.texto-location {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #FF7C00; /* Color naranja */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagen-location {
+    width: 20px; /* Ajusta el tamaño de la imagen según lo necesites */
+    height: auto;
+}

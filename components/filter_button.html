@@ -8,7 +8,7 @@
 <body>
 <button id="filter-button" class="button">Filtros</button>
 <div id="filter-container" class="filters">
-    <ul class="filters__list">
+    <ul class="filters-list">
         <li>
             <input id="f1" type="checkbox"/>
             <label for="f1">1 contra 1</label>
@@ -39,7 +39,6 @@
     var button = document.getElementById("filter-button");
     var container = document.getElementById("filter-container");
     var input = document.querySelectorAll("input");
-
     button.onclick = function (e) {
         e.stopPropagation();
         if (container.classList.contains("filters--active")) {
@@ -48,17 +47,13 @@
             container.classList.add("filters--active");
         }
     };
-
     container.onclick = function (e) {
         e.stopPropagation();
     };
-
     window.onclick = function () {
         container.classList.remove("filters--active");
     };
-
     console.log(input);
-
     for (var i = 0; i < input.length; i++) {
         var currentInput = input[i];
 
@@ -70,11 +65,10 @@
                     break;
                 }
             }
-
             if (isChecked) {
-                button.id.add("filter-button--highlight");
+                button.classList.add("button--highlight");
             } else {
-                button.id.remove("filter-button--highlight");
+                button.classList.remove("button--highlight");
             }
         };
     }

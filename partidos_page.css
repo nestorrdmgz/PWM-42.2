@@ -1,25 +1,48 @@
-/* Estilo para la línea de separación */
-.separador {
-    border-bottom: 3px solid #FF7C00; /* Línea naranja */
-    margin-bottom: 20px; /* Espacio entre la línea y el contenido */
+#contenido {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 48px;
+    background-color: #D9D9D9;
+    flex-direction: column; /* Cambiar la dirección a fila */
+    align-items: center; /* Centra horizontalmente los elementos */
 }
-
-.resultados-filtro {
+.title-buttons {
     display: flex;
-    flex-wrap: wrap;
-    font-weight: bold;
-    color: #FF7C00; /* Color naranja */
-    margin-top: 20px; /* Ajusta el valor según sea necesario */
-    justify-content: center; /* Centra verticalmente en el contenedor */
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
 }
-
-#filtro-container {
-    width: 80px; /* Ancho específico para el componente de filtro */
-    margin-left: auto; /* Empuja el componente de filtro hacia la derecha */
-    margin-right: 70px; /* Espacio entre el componente de filtros y el contenido */
+.title_partidos {
+    color: #FF7C00;
+    border: 4px solid #FF7C00;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: auto; /* Para que el título se alinee a la izquierda */
 }
-
-#plus-container {
-    margin-left: auto; /* Empuja el componente de filtro hacia la derecha */
-    margin-right: 40px; /* Espacio entre el componente de filtros y el contenido */
+.botones {
+    display: flex;
+}
+#add_match,
+#filter_button {
+    margin-left: 10px; /* Espacio entre los botones */
+}
+.pagination {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin-top: 20px; /* Añade un margen superior para separar la barra de paginación del contenido superior */
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    background-color: white;
+}
+.pagination a.active {
+    background-color: #FF7C00;
+    color: white;
+}
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
 }
