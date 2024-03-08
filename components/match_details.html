@@ -66,14 +66,12 @@
         </div>
     </div>
 </div>
+<script src="../scripts/functionalities.js"></script>
 <script>
-    // Supongamos que fechaHoraDB es una variable que contiene la fecha y hora de la base de datos
-    const fechaHoraDB = "2024-03-02, 12:30"; // Formato ISO 8601 (yyyy-mm-ddThh:mm)
-    // Obtener el elemento de párrafo por su clase
-    const pFechaHora = document.querySelectorAll(".fecha-y-hora-db");
-    // Asignar el valor de fechaHoraDB al párrafo
-    pFechaHora.forEach(p => {
-        p.textContent = "Fecha: " + fechaHoraDB;
+    // Llama a la función después de cargar el contenido del DOM
+    document.addEventListener('DOMContentLoaded', function () {
+        cargarDetallesPartido();
+        // Otras funcionalidades que desees ejecutar al cargar la página
     });
 </script>
 </body>

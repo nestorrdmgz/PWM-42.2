@@ -8,26 +8,45 @@
     <link rel="stylesheet" href="partidos_page.css">
     <link rel="stylesheet" href="components/add_match_button.css">
     <link rel="stylesheet" href="components/filter_button.css">
+    <link rel="stylesheet" href="components/match_details.css">
 </head>
 <body>
 <header id="header-container"></header>
 <div id="contenido">
-    <h1 class="title_partidos">TODOS LOS PARTIDOS</h1>
-    <div class="botones">
-        <div id="add_match"></div>
-        <div id="filter_button"></div>
+    <div class="title-buttons">
+        <h1 class="title_partidos">TODOS LOS PARTIDOS</h1>
+        <div class="botones">
+            <div id="add_match"></div>
+            <div id="filter_button"></div>
+        </div>
+    </div>
+    <div class="match_details"></div>
+    <div class="match_details"></div>
+    <div class="match_details"></div>
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
     </div>
 </div>
 <footer id="footer-container"></footer>
 <script src="scripts/header_footer.js"></script>
 <script src="scripts/components.js"></script>
+<script src="scripts/functionalities.js"></script>
 <script>
     // Llama a las funciones de carga cuando se carga la página
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         loadHeader();
         loadFooter();
         loadAddMatch();
         loadFilterButton();
+        loadMatchDetails();
+        cargarDetallesPartido();
     });
 </script>
 </body>
