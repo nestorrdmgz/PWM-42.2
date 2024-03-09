@@ -1,0 +1,17 @@
+.container-ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.container-ul li {
+    text-align: center;
+    margin:  60px 160px 80px 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff5c1f;
+}
+
+.container-ul li:last-child {
+    margin-right: 0;
+}

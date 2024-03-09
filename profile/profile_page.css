@@ -1,0 +1,95 @@
+main {
+    display: flex;
+    font-family: "Arial", sans-serif;
+}
+
+.right-column, .left-column {
+
+}
+
+.left-column {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-column {
+    flex: 2;
+    background-color: #e0e0e0;
+}
+
+.seguir {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-family: "Arial Black", serif;
+    color: darkorange;
+    border: 3px solid darkorange;
+    font-size: 15px;
+    background-color: rgba(131, 198, 255, 0.32);
+    cursor: pointer;
+}
+
+.canchas {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.canchas-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.configurar_perfil {
+    width: 200px;
+    padding: 5px;
+    margin: 60px 60px 5px 0;
+    font-weight: bold;
+    font-family: "Arial Black", serif;
+    color: darkorange;
+    border: 3px solid darkorange;
+    font-size: 15px;
+    background-color: rgba(131, 198, 255, 0.32);
+    cursor: pointer;
+}
+.titulo-article {
+    margin-top: 80px;
+    color: dodgerblue;
+}
+
+.linea-horizontal {
+    width: 95%; /* Ajusta el ancho al 100% del contenedor */
+    height: 2px; /* Altura de la línea */
+    background-color: #4392da; /* Color de la línea */
+}
+
+.canchas_favoritas {
+    list-style-type: none;
+
+}
+.canchas_favoritas li {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 45px;
+    padding: 27px;
+    border: 3px solid darkorange;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.canchas_favoritas li:last-child {
+    margin-bottom: 45px;
+}
+.estrella {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+
