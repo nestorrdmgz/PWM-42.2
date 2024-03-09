@@ -52,12 +52,15 @@
 <script src="../scripts/header_footer.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script>
-    // Llama a las funciones de carga cuando se carga la página
-    document.addEventListener('DOMContentLoaded', function() {
-        loadHeader();
+    var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
+    document.addEventListener('DOMContentLoaded', function () {
+        if (isLoggedIn) {
+            loadLoggedHeader(); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+        } else {
+            loadHeader(); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+        }
         loadFooter();
     });
-
     var locations = [
         { name: 'Instalaciones Polideportivas Pepe Armas', coordinates: [28.09798, -15.45714] },
         { name: 'Pabellón polideportivo ULPGC', coordinates: [28.06861, -15.45610] },

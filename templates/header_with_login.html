@@ -15,7 +15,48 @@
         <a href="#" class="header_nav_button">MVPs</a>
         <a href="#" class="header_nav_button">NOSOTROS</a>
     </nav>
+
     <button class="header_profile_button">Cuenta</button>
+    <div id="option-container" class="options">
+        <ul class="options-list">
+            <li><a href="../profile/own_profile.html">Mi perfil</a></li>
+            <li><a>Cerrar sesión</a></li>
+        </ul>
+    </div>
+
 </header>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var button = document.querySelector(".header_profile_button");
+        var container = document.getElementById("option-container");
+        button.onclick = function (e) {
+            e.stopPropagation();
+            container.classList.toggle("options--active");
+        };
+        container.onclick = function (e) {
+            e.stopPropagation();
+        };
+        window.onclick = function () {
+            container.classList.remove("options--active");
+        };
+        var input = document.querySelectorAll("input[type=checkbox]");
+        for (var i = 0; i < input.length; i++) {
+            input[i].onclick = function () {
+                var isChecked = false;
+                for (var j = 0; j < input.length; j++) {
+                    if (input[j].checked) {
+                        isChecked = true;
+                        break;
+                    }
+                }
+                if (isChecked) {
+                    button.classList.add("button--highlight");
+                } else {
+                    button.classList.remove("button--highlight");
+                }
+            };
+        }
+    });
+</script>
 </body>
 </html>

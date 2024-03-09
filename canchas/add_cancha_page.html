@@ -47,9 +47,13 @@
 <script src="../scripts/header_footer.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script>
-    // Llama a las funciones de carga cuando se carga la página
+    var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
     document.addEventListener('DOMContentLoaded', function () {
-        loadHeader();
+        if (isLoggedIn) {
+            loadLoggedHeader(); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+        } else {
+            loadHeader(); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+        }
         loadFooter();
     });
 
