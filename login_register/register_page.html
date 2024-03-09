@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Regístrate</title>
-    <link rel="stylesheet" href="register_page.css">
+    <link rel="stylesheet" href="login_register_page.css">
 </head>
 <body>
 <div class="register-page-container">
-    <img alt="image" src="images/logoLogin.png" class="logo-login"/>
+    <img alt="image" src="../images/logoLogin.png" class="logo-login"/>
     <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
     <form class="register-page-form">
         <span class="register-text">REGÍSTRATE</span>
@@ -17,6 +17,7 @@
                         type="text"
                         placeholder="Nombre"
                         class="register-page-nameinput input"
+                        required
                 />
             </label>
             <label>
@@ -24,6 +25,7 @@
                         type="text"
                         placeholder="Apellidos"
                         class="register-page-surnameinput input"
+                        required
                 />
             </label>
             <label>
@@ -31,6 +33,7 @@
                         type="email"
                         placeholder="Correo electrónico"
                         class="register-page-mailinput input"
+                        required
                 />
             </label>
             <label>
@@ -38,6 +41,7 @@
                         type="password"
                         placeholder="Contraseña"
                         class="register-page-passwdinput input"
+                        required
                 />
             </label>
             <div class="island_and_place">
@@ -87,7 +91,7 @@
             </div>
             <div class="checkbox-container">
                 <input type="checkbox" id="terms-checkbox" class="terms-checkbox">
-                <label for="terms-checkbox" class="terms-label">He leído y acepto los <a href="terms_and_conditions_page.html">términos y condiciones</a></label>
+                <label for="terms-checkbox" class="terms-label">He leído y acepto los <a href="../nosotros_terms/terms_and_conditions_page.html">términos y condiciones</a></label>
             </div>
             <input type="submit" class="register-button button" value="SIGN UP">
             <span class="register-question">¿Tienes cuenta?</span>
