@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Courtlink: Términos y condiciones</title>
-    <link rel="stylesheet" href="../mvps/mvps_page.css">
     <link rel="stylesheet" href="../templates/header.css">
     <link rel="stylesheet" href="../templates/footer.css">
+    <link rel="stylesheet" href="../nosotros_terms/nosotros_page.css">
 </head>
 <body>
 <header id="header-container"></header>
@@ -46,5 +46,12 @@
 </div>
 <footer id="footer-container"></footer>
 <script src="../scripts/header_footer.js"></script>
+<script>
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function() {
+        loadHeader();
+        loadFooter();
+    });
+</script>
 </body>
 </html>

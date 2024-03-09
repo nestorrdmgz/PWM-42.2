@@ -17,28 +17,50 @@
                 <label for="file-input" class="file-label"></label>
                 <img id="profile-image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Foto de perfil">
             </div>
-            <input type="text" placeholder="Nombre de usuario">
             <div>
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Apellido">
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellidos" required>
             </div>
-            <input type="email" placeholder="Correo electrónico">
-            <div>
-                <input type="text" placeholder="Localidad">
-                <input type="text" placeholder="Nacionalidad">
+            <input type="email" placeholder="Correo electrónico" required>
+            <div class="island_and_place">
+                <label>
+                    Isla:
+                    <select id="island" class="edit-page-islandinput input">
+                        <option value="isla1">Gran Canaria</option>
+                        <option value="isla2">Tenerife</option>
+                        <option value="isla3">La Palma</option>
+                        <option value="isla4">Fuerteventura</option>
+                        <option value="isla5">El Hierro</option>
+                        <option value="isla6">La Gomera</option>
+                        <option value="isla7">Lanzarote</option>
+                        <option value="isla8">La Graciosa</option>
+                    </select>
+                </label>
+                <label>
+                    Municipio:
+                    <select id="municipality" class="edit-page-placedinput input"></select>
+                </label>
             </div>
             <div>
-                <input type="number" placeholder="Altura">
-                <input type="text" placeholder="Posición">
+                <input type="number" placeholder="Altura (cm)" min="150" max="230" required>
+                <label>
+                    Posición:
+                    <select id="position" class="edit-page-positioninput input">
+                        <option value="Base">Base</option>
+                        <option value="Escolta">Escolta</option>
+                        <option value="Alero">Alero</option>
+                        <option value="Ala-Pívot">Ala-Pívot</option>
+                        <option value="Pívot">Pívot</option>
+                    </select>
+                </label>
             </div>
                 <input type="submit" value="Guardar">
         </form>
     </section>
 </main>
-
 <footer id="footer-container"></footer>
-
 <script src="../scripts/header_footer.js"></script>
+<script src="../scripts/isla_y_municipio.js"></script>
 <script>
     // Llama a las funciones de carga cuando se carga la página
     document.addEventListener('DOMContentLoaded', function () {

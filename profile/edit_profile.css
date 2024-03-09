@@ -7,7 +7,7 @@ main {
 }
 
 .card {
-    border: 4px solid darkorange;
+    border: 4px solid #ff7c00;
     background-color: #dcdcdc;
     border-radius: 10%;
     display: flex;
@@ -39,7 +39,7 @@ input {
     margin: 0 30px 30px 0;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid darkorange;
+    border: 2px solid #ff7c00;
     font-weight: bold;
     cursor: pointer;
 }
@@ -84,6 +84,41 @@ input:last-child{
     left: 0;
     cursor: pointer;
 }
-
-
-
+.edit-page-islandinput {
+    text-align: center;
+    width: 150px;
+    margin: 0 30px 30px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ff7c00;
+    font-weight: bold;
+    cursor: pointer;
+}
+.edit-page-placedinput {
+    text-align: center;
+    width: 250px;
+    margin: 0 30px 30px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ff7c00;
+    font-weight: bold;
+    cursor: pointer;
+}
+.edit-page-positioninput {
+    text-align: center;
+    width: 200px;
+    margin: 0 30px 30px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ff7c00;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card-form {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #ff7c00;
+    font-weight: bold;
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0; /* Elimina el relleno por defecto del body */
+    overflow: hidden; /* Evita la barra de desplazamiento horizontal */
+}

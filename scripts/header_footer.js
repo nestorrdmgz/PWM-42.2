@@ -18,7 +18,7 @@ function loadFooter() {
 }
 
 function loadImage_profile() {
-    fetch('components/image_profile.html')
+    fetch('../components/image_profile.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('image-container').innerHTML = html;
@@ -27,7 +27,7 @@ function loadImage_profile() {
 }
 
 function loadInfo_account() {
-    fetch('components/info_account.html')
+    fetch('../components/info_account.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('info_account-container').innerHTML = html;
@@ -36,7 +36,7 @@ function loadInfo_account() {
 }
 
 function loadPersonal_info() {
-    fetch('components/personal_info.html')
+    fetch('../components/personal_info.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('personal_info-container').innerHTML = html;
