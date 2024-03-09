@@ -12,6 +12,25 @@
     font-weight: bold;
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
 }
+.back-button {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 50%;
+    background-color: #FF7C00;
+    color: #fff;
+}
+.details-button {
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #FF7C00;
+    border: 3px solid #FF7C00; /* Borde naranja */
+}
+.details-button:hover {
+    background-color: #FF7C00;
+    color: #ffffff;
+}
 .add-cancha-page-form {
     align-items: center;
     flex-direction: column;
@@ -25,6 +44,7 @@
     margin-bottom: 20px;
     width: 900px;
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+    margin-top: 20px;
 }
 .court-place {
     align-self: center;
@@ -57,7 +77,6 @@
     border: 2px solid #FF7C00; /* Borde naranja */
     border-radius: 5px;
 }
-
 #add-court-button::after {
     content: "";
     background-image: url('../images/plus-vector.png');
@@ -66,6 +85,13 @@
     width: 20px; /* Ancho deseado de la imagen */
     height: 20px; /* Altura deseada de la imagen */
     margin-left: 5px; /* Espacio entre el texto del botón y la imagen */
+}
+.cancha-name{
+    background-color: white;
+    height: 40px;
+    border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
+    border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
+    padding: 10px; /* Añade un espacio de relleno para separar el texto del borde */
 }
 .add-cancha-page-nameinput {
     width: 420px;
@@ -80,8 +106,6 @@
 .checkbox-container {
     margin-top: 24px;
 }
-
-
 .court-image {
     margin-top: 16px;
     display: flex;

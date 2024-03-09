@@ -9,11 +9,11 @@
 <div class="matches-container">
     <div class="match-details">
         <h1 class="texto-titulo-partido">Lore ipsum - 3X3</h1>
-        <div class="location-container">
+        <a href="../canchas/cancha_details_page.html" class="location-container">
             <img class="imagen-location" src="../images/location-vector.png" alt="Imagen de ubicación">
             <span class="texto-location">Lore ipsum</span>
-        </div>
-        <h3 class="fecha-y-hora-db"></h3>
+        </a>
+        <span class="fecha-y-hora">2024-04-02, 12:30</span>
     </div>
     <div class="match-teams">
         <div class="teamA-container">
@@ -32,7 +32,7 @@
                 </div>
                 <p class="texto">Lorem ipsum</p>
             </button>
-            <button class="anadirse-button">
+            <button class="anadirse-button" onclick="convertirAUsuario(this)">
                 <div class="imagen-container">
                     <img class="imagen" src="../images/plus-vector.png" alt="Add user">
                     <div class="linea"></div>
@@ -49,14 +49,14 @@
                 </div>
                 <p class="texto">Lorem ipsum</p>
             </button>
-            <button class="anadirse-button">
+            <button class="anadirse-button" onclick="convertirAUsuario(this)">
                 <div class="imagen-container">
                     <img class="imagen" src="../images/plus-vector.png" alt="Add user">
                     <div class="linea"></div>
                 </div>
                 <p class="texto">APUNTARSE</p>
             </button>
-            <button class="anadirse-button">
+            <button class="anadirse-button" onclick="convertirAUsuario(this)">
                 <div class="imagen-container">
                     <img class="imagen" src="../images/plus-vector.png" alt="Add user">
                     <div class="linea"></div>
@@ -66,13 +66,17 @@
         </div>
     </div>
 </div>
-<script src="../scripts/functionalities.js"></script>
 <script>
-    // Llama a la función después de cargar el contenido del DOM
-    document.addEventListener('DOMContentLoaded', function () {
-        cargarDetallesPartido();
-        // Otras funcionalidades que desees ejecutar al cargar la página
-    });
+    function convertirAUsuario(button) {
+        button.classList.remove('anadirse-button');
+        button.classList.add('boton-usuario');
+        button.innerHTML = `
+            <div class="imagen-container">
+                <img class="imagen" src="../images/user-icon.jpg" alt="Foto de perfil">
+                <div class="linea"></div>
+            </div>
+            <p class="texto">Lorem ipsum</p>`;
+    }
 </script>
 </body>
 </html>
