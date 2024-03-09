@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CourtLink: Añadir cancha</title>
+    <link rel="stylesheet" href="../templates/header.css">
+    <link rel="stylesheet" href="../templates/footer.css">
+    <link rel="stylesheet" href="canchas_page.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
+</head>
+<body>
+<header id="header-container"></header>
+<div class="canchas-contenido">
+    <h1 class="title_canchas">AÑADIR CANCHA</h1>
+    <form class="add-cancha-page-form">
+        <label>
+            Nombre:
+            <input
+                    type="text"
+                    placeholder="Nombre"
+                    class="add-cancha-page-nameinput input"
+                    required
+            />
+        </label>
+        <div class="court-place">
+            <label for="selected-location">Ubicación:</label>
+            <span id="selected-location"></span>
+            <div id="map"></div>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="light-checkbox" class="light-checkbox">
+            <label for="light-checkbox" class="light-label">La cancha está iluminada</label>
+        </div>
+
+        <div class="court-image">
+            <span class="seleccion_imagen">Selecciona una imagen de la cancha:</span>
+            <input type="file" id="myFile" name="filename" accept="image/png, image/jpeg" onchange="previewImage()">
+            <input type="submit" id="submitBtn">
+            <div id="image-preview"></div>
+        </div>
+
+        <button id="add-court-button" class="button" onclick="window.location.href='canchas_page.html';">Añadir</button>
+    </form>
+</div>
+<footer id="footer-container"></footer>
+<script src="../scripts/header_footer.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function () {
+        loadHeader();
+        loadFooter();
+    });
+
+    // Función para marcar lugares en el mapa
+    var map = L.map('map').setView([28.09973, -15.41343], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
+    var marker;
+    function onMapClick(e) {
+        if (marker) {
+            map.removeLayer(marker);
+        }
+        marker = new L.marker(e.latlng).addTo(map);
+        document.getElementById('selected-location').textContent = "Latitud: " + e.latlng.lat.toFixed(5) + ", Longitud: " + e.latlng.lng.toFixed(5);
+    }
+    map.on('click', onMapClick);
+
+    // Función para hacer la preview de imágenes de las canchas
+    function previewImage() {
+        var preview = document.getElementById('image-preview');
+        var file = document.getElementById('myFile').files[0];
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            var img = new Image();
+            img.src = reader.result;
+            img.onload = function() {
+                var width = this.width;
+                var height = this.height;
+                var size = Math.min(width, height);
+                preview.innerHTML = '<img src="' + this.src + '" style="width:' + size + 'px;height:' + size + 'px;">';
+            }
+        }
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.innerHTML = "";
+        }
+    }
+</script>
+</body>
+</html>
