@@ -11,6 +11,7 @@
 <body>
 <header id="header-container"></header>
 <div class="canchas-contenido">
+    <a href="canchas_page.html" class="back-button">&#8249;</a>
     <h1 class="title_canchas">AÑADIR CANCHA</h1>
     <form class="add-cancha-page-form">
         <label>
@@ -79,7 +80,7 @@
                 var width = this.width;
                 var height = this.height;
                 var size = Math.min(width, height);
-                preview.innerHTML = '<img src="' + this.src + '" style="width:' + size + 'px;height:' + size + 'px;">';
+                preview.innerHTML = '<img src="' + this.src + '" style="width:' + size + 'px;height:' + size + 'px;" alt="">';
             }
         }
         if (file) {
