@@ -120,3 +120,45 @@
     width: 25px;
     height: 25px;
 }
+
+
+
+ul {
+    list-style: none;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+li {
+    padding: 0.5em;
+}
+.options {
+    box-shadow: 0 0 0.5em 0 rgba(0,0,0,0.3);
+    padding: 1.5em;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #FF7C00;
+    background-color: #ffffff;
+    top: 163px;
+    left: 1333px;
+    z-index: 1000;
+}
+.options-list a {
+    text-decoration: none;
+    color: inherit;
+}
+.options-list li {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    padding-bottom: 1em;
+    line-height: 0;
+}
+.options-list li:last-child {
+    padding-bottom: 0;
+}
+.options:not(.options--active) {
+    display: none;
+}

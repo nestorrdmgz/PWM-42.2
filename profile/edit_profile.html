@@ -62,9 +62,13 @@
 <script src="../scripts/header_footer.js"></script>
 <script src="../scripts/isla_y_municipio.js"></script>
 <script>
-    // Llama a las funciones de carga cuando se carga la página
+    var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
     document.addEventListener('DOMContentLoaded', function () {
-        loadHeader();
+        if (isLoggedIn) {
+            loadLoggedHeader(); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+        } else {
+            loadHeader(); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+        }
         loadFooter();
     });
 </script>
