@@ -5,13 +5,14 @@ body {
     padding: 0; /* Elimina el relleno por defecto del body */
     overflow: hidden; /* Evita la barra de desplazamiento horizontal */
 }
-.register-page-container {
+.register-page-container,
+.login-page-container {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url("images/basketball-court-venice-beach-sunset.jpg");
+    background-image: url("../images/basketball-court-venice-beach-sunset.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -35,6 +36,76 @@ body {
 }
 .slogan strong {
     font-weight: bold;
+}
+.login-page-form {
+    top: 96px;
+    right: 106px;
+    width: 655px;
+    height: 390px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: linear-gradient(90deg, rgb(241, 242, 181) 0.00%,rgba(19, 80, 88, 0.93) 100.00%);
+}
+.login-text {
+    color: #ffffff;
+    font-size: 30px;
+    align-self: center;
+    font-style: normal;
+    margin-top: 32px;
+    font-weight: 700;
+}
+.login-page-inputs {
+    width: 560px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.login-page-mailinput,
+.login-page-passwdinput {
+    width: 420px;
+    height: 40px;
+    align-self: center;
+    margin-top: 24px;
+    text-align: left;
+    border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
+    border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
+    padding: 10px; /* Añade un espacio de relleno para separar el texto del borde */
+}
+.login-button {
+    color: #ffffff;
+    width: 166px;
+    height: 44px;
+    font-size: 18px;
+    font-style: normal;
+    margin-top: 32px;
+    text-align: center;
+    transition: 0.3s;
+    font-weight: 700;
+    background-color: rgb(255, 124, 0);
+    /* Establece un color uniforme para el borde */
+    border: 4px solid #234bf0;
+    border-radius: 5px;
+    box-shadow: none; /* Elimina el efecto de sombra en el borde */
+}
+.login-button:hover {
+    border-color: #BF2626;
+    background-color: #BF2626;
+}
+.login-question {
+    color: #ffffff;
+    width: auto;
+    margin-top: 16px;
+}
+.login-page-navlink {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: underline;
 }
 .register-page-form {
     top: 30px;
@@ -150,23 +221,4 @@ body {
     border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
     border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
     padding: 10px; /* Añade un espacio de relleno para separar el texto del borde */
-}
-@media(max-width: 1200px) {
-    .register-button {
-        top: -1px;
-        color: #ffffff;
-        right: 7px;
-        width: 142px;
-        height: 42px;
-        position: absolute;
-        font-size: 18px;
-        font-style: inherit;
-        font-family: "Arial Nova", sans-serif;
-        font-weight: 700;
-        line-height: 1.15;
-        border-color: #234bf0;
-        border-width: 3px;
-        text-transform: uppercase;
-        background-color: #FF7C00;
-    }
 }

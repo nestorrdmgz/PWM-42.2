@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CourtLink: Detalles de la cancha</title>
+    <link rel="stylesheet" href="../templates/header.css">
+    <link rel="stylesheet" href="../templates/footer.css">
+    <link rel="stylesheet" href="canchas_page.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
+</head>
+<body>
+<header id="header-container"></header>
+<div class="canchas-contenido">
+    <a href="canchas_page.html" class="back-button">&#8249;</a>
+    <h1 class="title_canchas">DETALLES DE LA CANCHA</h1>
+    <div class="cancha-details">
+        <label>
+            <span>Nombre:</span>
+            <span id="cancha-name" class="cancha-name">Lore Ipsum</span>
+
+            <div class="court-place">
+                <span id="selected-location">Ubicación:</span>
+                <div id="map"></div>
+            </div>
+        </label>
+        <div class="checkbox-container">
+            <input type="checkbox" id="light-checkbox" class="light-checkbox" checked disabled>
+            <label for="light-checkbox" class="light-label">La cancha está iluminada</label>
+        </div>
+        <div class="court-image">
+            <div id="image-preview">
+                <img src="../images/default_image.jpg" alt="Imagen por defecto">
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer-container"></footer>
+<script src="../scripts/header_footer.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function () {
+        loadHeader();
+        loadFooter();
+    });
+
+    // Función para ver el lugar de la cancha en el mapa
+    const locations = [
+        {name: 'Pabellón polideportivo ULPGC', coordinates: [28.06861, -15.45610]}
+    ];
+
+    const map = L.map('map').setView([28.09973, -15.41343], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
+
+    locations.forEach(function (location) {
+        L.marker(location.coordinates).addTo(map).bindPopup(location.name).on('click', function () {
+            document.getElementById('place-input').value = location.name;
+        });
+    });
+</script>
+</body>
+</html>

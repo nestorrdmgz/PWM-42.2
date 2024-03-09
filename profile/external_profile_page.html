@@ -7,13 +7,13 @@
     <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Court Link: Perfil propio</title>
-        <link rel="stylesheet" href="templates/header.css">
-        <link rel="stylesheet" href="templates/footer.css">
+        <title>CourtLink: Perfil propio</title>
+        <link rel="stylesheet" href="../templates/header.css">
+        <link rel="stylesheet" href="../templates/footer.css">
         <link rel="stylesheet" href="profile_page.css">
-        <link rel="stylesheet" href="components/image_profile.css">
-        <link rel="stylesheet" href="components/info_account.css">
-        <link rel="stylesheet" href="components/personal_info.css">
+        <link rel="stylesheet" href="../components/image_profile.css">
+        <link rel="stylesheet" href="../components/info_account.css">
+        <link rel="stylesheet" href="../components/personal_info.css">
 
     </head>
     <body>
@@ -54,15 +54,16 @@
 
     <footer id="footer-container"></footer>
 
-    <script src="scripts/header_footer.js"></script>
+    <script src="../scripts/header_footer.js"></script>
+    <script src="../scripts/components.js"></script>
     <script>
         // Llama a las funciones de carga cuando se carga la página
         document.addEventListener('DOMContentLoaded', function () {
             loadHeader();
             loadFooter();
-            loadImage_profile()
-            loadInfo_account()
-            loadPersonal_info()
+            loadImage_profile();
+            loadInfo_account();
+            loadPersonal_info();
         });
     </script>
     </body>
