@@ -1,7 +1,7 @@
 <a href="https://www.eii.ulpgc.es" target="_blank"><img src="https://www.eii.ulpgc.es/sites/default/files/eii-acron-mod.png" alt="EII-ULPGC" align="right" width="516" height="150" /></a>
 # COURTLINK BASKETBALL
 > - Elaboración de un sitio web
-> - Realizado por Álvaro Rodríguez Teimoy, Néstor Rodríguez Domínguez e Imanol Quintero Bermúdez
+> - Realizado por Álvaro Rodríguez Teimoy, Néstor Domínguez Moreno e Imanol Quintero Bermúdez
 > - Proyecto realizado para la asignatura Producción Web y Móvil (PWM)
 
 Esta práctica tiene como objetivo el desarrollo de un sitio web y sus páginas asociados.
