@@ -59,14 +59,14 @@
     var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
     document.addEventListener('DOMContentLoaded', function () {
         if (isLoggedIn) {
-            loadLoggedHeader(); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+            loadTemplate("../templates/header_with_login.html","header-container"); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
         } else {
-            loadHeader(); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+            loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
         }
-        loadFooter();
-        loadImage_profile();
-        loadInfo_account();
-        loadPersonal_info();
+        loadTemplate("../templates/footer.html","footer-container");
+        loadTemplate("../components/image_profile.html","image-container");
+        loadTemplate("../components/info_account.html","info_account-container");
+        loadTemplate("../components/personal_info.html","personal_info-container");
     });
 </script>
 </body>

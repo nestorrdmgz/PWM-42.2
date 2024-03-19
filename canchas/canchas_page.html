@@ -26,8 +26,8 @@
 <script>
     // Llama a las funciones de carga cuando se carga la página
     document.addEventListener('DOMContentLoaded', function () {
-        loadHeader();
-        loadFooter();
+        loadTemplate("../templates/header.html","header-container");
+        loadTemplate("../templates/footer.html","footer-container");
     });
 
     var locations = [

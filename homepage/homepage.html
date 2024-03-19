@@ -24,7 +24,7 @@
         </article>
         <article class="right">
             <h1>Encuentra basketlovers a tu alrededor</h1>
-            <form action="partidos_page.html">
+            <form action="/partidos_page.html">
                 <input type="number" placeholder="Código postal" min="35000" max="38917">
                 <select id="opciones">
                     <option value="1vs1">1 vs 1</option>
@@ -47,11 +47,11 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         if (isLoggedIn) {
-            loadLoggedHeader(); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+            loadTemplate("../templates/header_with_login.html","header-container");; // Carga el header con inicio de sesión si el usuario ha iniciado sesión
         } else {
-            loadHeader(); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+            loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
         }
-        loadFooter();
+        loadTemplate("../templates/footer.html","footer-container");
     });
 </script>
 </body>
