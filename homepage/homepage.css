@@ -100,3 +100,23 @@ h1 {
     width: 75%;
     margin-bottom: 60px;
 }
+
+
+@media screen and (max-width: 768px) {
+    #video-background {
+        display: none;
+    }
+    #quienes_somos {
+        display: none;
+    }
+    .right {
+        display: none;
+    }
+
+
+    .body-lema {
+        text-align: center;
+        margin: 0;
+    }
+
+}

@@ -6,51 +6,54 @@
     <link rel="stylesheet" href="add_match_page.css">
     <link rel="stylesheet" href="../templates/header.css">
     <link rel="stylesheet" href="../templates/footer.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="../templates/templatesEvents.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
-<div class="add-match-contenido">
+<div w3-include-html="../templates/header.html"></div>
+<main class="add-match-contenido">
     <h1 class="title_add_match">AÑADIR PARTIDO</h1>
     <form class="add-match-form">
         <span class="add-match-message">¡Añade un partido y empieza a jugar ya!</span>
-            <div>
-                <label class="match-name">
-                    Nombre del partido:
-                    <input
-                            type="text"
-                            placeholder="Nombre del partido"
-                            class="name-input input"
-                    />
-                </label>
-            </div>
-            <div class="match-place">
-                <label for="selected-location">Ubicación:</label>
-                <span id="selected-location"></span>
-                <div id="map"></div>
-            </div>
-            <div class="match-datetime">
-                <label for="datetime-input">Fecha y Hora:</label>
-                <input type="datetime-local" id="datetime-input" name="fecha_hora">
-            </div>
-            <div class="match-modality">
-                <label>
-                    Modalidad:
-                    <select id="modalidad" class="modalidad-input input">
-                        <option value="modalidad1">1 vs 1</option>
-                        <option value="modalidad2">2 vs 2</option>
-                        <option value="modalidad3">3 vs 3</option>
-                        <option value="modalidad4">4 vs 4</option>
-                        <option value="modalidad5">5 vs 5</option>
-                    </select>
-                </label>
-            </div>
-            <input type="submit" class="add-match-button button" value="AÑADIR">
+        <div>
+            <label class="match-name">
+                Nombre del partido:
+                <input
+                        type="text"
+                        placeholder="Nombre del partido"
+                        class="name-input input"
+                        required
+                />
+            </label>
+        </div>
+        <div class="match-place">
+            <input type="hidden" id="selected-location" name="selected-location">
+            <div id="map"></div>
+        </div>
+        <div class="match-datetime">
+            <label for="datetime-input">Fecha y Hora:</label>
+            <input type="datetime-local" id="datetime-input" name="fecha_hora" required>
+        </div>
+        <div class="match-modality">
+            <label>
+                Modalidad:
+                <select id="modalidad" class="modalidad-input input">
+                    <option value="modalidad1">1 vs 1</option>
+                    <option value="modalidad2">2 vs 2</option>
+                    <option value="modalidad3">3 vs 3</option>
+                    <option value="modalidad4">4 vs 4</option>
+                    <option value="modalidad5">5 vs 5</option>
+                </select>
+            </label>
+        </div>
+        <input type="submit" class="add-match-button button" value="AÑADIR">
     </form>
-</div>
-<footer id="footer-container"></footer>
+</main>
+<div w3-include-html="../templates/footer.html"></div>
 <script src="../scripts/header_footer.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="../scripts/localizaciones.js"></script>
 <script>
     var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
     document.addEventListener('DOMContentLoaded', function () {
@@ -61,29 +64,18 @@
         }
         loadFooter();
     });
-    var locations = [
-        { name: 'Instalaciones Polideportivas Pepe Armas', coordinates: [28.09798, -15.45714] },
-        { name: 'Pabellón polideportivo ULPGC', coordinates: [28.06861, -15.45610] },
-        { name: 'Canchas Deportivas Alcaravaneras', coordinates: [28.13310, -15.42888] },
-        { name: 'Pabellón Insular Rita Hernández', coordinates: [28.00358, -15.40408] },
-        { name: 'Pabellón Exterior Narea', coordinates: [27.99852, -15.41178] },
-        { name: 'IES Valsequillo', coordinates: [27.99477, -15.49841] },
-        { name: 'IES Schamann', coordinates: [28.11102, -15.43537] },
-        { name: 'Pabellón Nicolas González Vega', coordinates: [27.91849, -15.42485] },
-        { name: 'Instalaciones Polideportivas de Guanarteme', coordinates: [28.13392, -15.44049] }
-    ];
+    w3IncludeHTML();
 
-    var map = L.map('map').setView([28.09973, -15.41343], 12);
+    document.getElementById('add-match-button').addEventListener('click', function (event) {
+        // Obtener la ubicación seleccionada
+        var selectedLocation = document.getElementById('selected-location').textContent;
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-    }).addTo(map);
-
-    locations.forEach(function(location) {
-        L.marker(location.coordinates).addTo(map).bindPopup(location.name).on('click', function() {
-            document.getElementById('selected-location').textContent = location.name;
-            document.getElementById('place-input').value = location.name;
-        });
+        // Validar si se ha seleccionado una ubicación
+        if (selectedLocation === 'Ubicación:') {
+            // Si no se ha seleccionado una ubicación, prevenir el envío del formulario
+            event.preventDefault();
+            alert('Por favor selecciona una ubicación');
+        }
     });
 </script>
 </body>

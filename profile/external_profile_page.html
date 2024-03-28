@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="../components/image_profile.css">
     <link rel="stylesheet" href="../components/info_account.css">
     <link rel="stylesheet" href="../components/personal_info.css">
+    <script src="../templates/templatesEvents.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
+<div w3-include-html="../templates/header.html"></div>
 <main>
     <section class="left-column">
         <div id="image-container"></div>
@@ -45,7 +47,7 @@
         </article>
     </section>
 </main>
-<footer id="footer-container"></footer>
+<div w3-include-html="../templates/footer.html"></div>
 <script src="../scripts/header_footer.js"></script>
 <script src="../scripts/components.js"></script>
 <script>
@@ -61,6 +63,8 @@
         loadInfo_account();
         loadPersonal_info();
     });
+    w3IncludeHTML();
 </script>
+<script src="../scripts/profile_page.js"></script> <!-- Script para manejar la carga del perfil -->
 </body>
 </html>

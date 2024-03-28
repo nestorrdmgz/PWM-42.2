@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <title>Inicia sesión</title>
     <link rel="stylesheet" href="login_register_page.css">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="../templates/templatesEvents.js"></script>
+    <link rel="stylesheet" href="../templates/header.css">
 </head>
 <body>
-<div class="login-page-container">
+<div w3-include-html="../templates/header.html"></div>
+<main class="login-page-container">
+    <div class="logo-mobile-container">
+        <span class="slogan-mobile">Únete ya al Dream Team de jugadores que se han ligado a nuestra plataforma</span>
+    </div>
     <img alt="image" src="../images/logoLogin.png" class="logo-login"/>
     <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
     <form class="login-page-form">
         <span class="login-text">INICIA SESIÓN</span>
         <div class="login-page-inputs">
             <label>
+                Correo electrónico<br>
                 <input
                         type="email"
                         placeholder="Correo electrónico"
@@ -20,6 +28,7 @@
                 />
             </label>
             <label>
+                Contraseña<br>
                 <input
                         type="password"
                         placeholder="Contraseña"
@@ -31,6 +40,10 @@
             <a href="register_page.html" class="login-page-navlink">Regístrate</a>
         </div>
     </form>
-</div>
+</main>
+<div w3-include-html="../templates/footer.html"></div>
+<script>
+    w3IncludeHTML();
+</script>
 </body>
 </html>

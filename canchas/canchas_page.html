@@ -6,53 +6,32 @@
     <link rel="stylesheet" href="../templates/header.css">
     <link rel="stylesheet" href="../templates/footer.css">
     <link rel="stylesheet" href="canchas_page.css">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="../templates/templatesEvents.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
-<div class="canchas-contenido">
+<div w3-include-html="../templates/header.html"></div>
+<main class="canchas-contenido">
     <h1 class="title_canchas">CANCHAS</h1>
     <button id="add-court-button" class="button" onclick="window.location.href='add_cancha_page.html';">Añadir cancha</button>
     <div class="court-place">
-        <label for="selected-location">Ubicación:</label>
+        <label id="for_selected" for="selected-location">Ubicación:</label>
         <span id="selected-location"></span>
         <div id="map"></div>
     </div>
-    <a href="cancha_details_page.html" class="details-button">Detalles de la cancha</a>
-</div>
-<footer id="footer-container"></footer>
-<script src="../scripts/header_footer.js"></script>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <a href="cancha_details_page.html" class="details-button" onclick="storeSelectedLocation(document.getElementById('selected-location').textContent)">Detalles de la cancha</a>
+</main>
+<div w3-include-html="../templates/footer.html"></div>
+<script src="../scripts/localizaciones.js"></script>
+<script src="../scripts/selectedLocation.js"></script>
 <script>
+    w3IncludeHTML();
     // Llama a las funciones de carga cuando se carga la página
     document.addEventListener('DOMContentLoaded', function () {
         loadHeader();
         loadFooter();
-    });
-
-    var locations = [
-        {name: 'Instalaciones Polideportivas Pepe Armas', coordinates: [28.09798, -15.45714]},
-        {name: 'Pabellón polideportivo ULPGC', coordinates: [28.06861, -15.45610]},
-        {name: 'Canchas Deportivas Alcaravaneras', coordinates: [28.13310, -15.42888]},
-        {name: 'Pabellón Insular Rita Hernández', coordinates: [28.00358, -15.40408]},
-        {name: 'Pabellón Exterior Narea', coordinates: [27.99852, -15.41178]},
-        {name: 'IES Valsequillo', coordinates: [27.99477, -15.49841]},
-        {name: 'IES Schamann', coordinates: [28.11102, -15.43537]},
-        {name: 'Pabellón Nicolas González Vega', coordinates: [27.91849, -15.42485]},
-        {name: 'Instalaciones Polideportivas de Guanarteme', coordinates: [28.13392, -15.44049]}
-    ];
-
-    var map = L.map('map').setView([28.09973, -15.41343], 12);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-    }).addTo(map);
-
-    locations.forEach(function (location) {
-        L.marker(location.coordinates).addTo(map).bindPopup(location.name).on('click', function () {
-            document.getElementById('selected-location').textContent = location.name;
-            document.getElementById('place-input').value = location.name;
-        });
     });
 </script>
 </body>

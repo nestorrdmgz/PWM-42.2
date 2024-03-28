@@ -1,5 +1,7 @@
-#partidos-contenido {
+main {
     font-family: Arial, Helvetica, sans-serif;
+}
+#partidos-contenido {
     width: 100%;
     padding: 48px;
     background-color: #D9D9D9;

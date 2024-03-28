@@ -77,15 +77,6 @@
     border-radius: 5px;
 }
 
-@media screen and (max-width: 500px) {
-    .navbar a {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-}
-
 /* Estilos para el botón de inicio de sesión y el botón de cuenta*/
 .header_profile_button,
 .header_login_button {
@@ -110,6 +101,7 @@
     content: "▼";
     padding-left: 0.5em;
 }
+
 .header_profile_button::before {
     content: ""; /* Agrega este contenido vacío para que aparezca el ícono */
     background-image: url('../images/user-icon.jpg');
@@ -122,19 +114,21 @@
 }
 
 
-
 ul {
     list-style: none;
 }
+
 ul, li {
     margin: 0;
     padding: 0;
 }
+
 li {
     padding: 0.5em;
 }
-.options {
-    box-shadow: 0 0 0.5em 0 rgba(0,0,0,0.3);
+
+.profile-options {
+    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.3);
     padding: 1.5em;
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
@@ -145,20 +139,249 @@ li {
     left: 1333px;
     z-index: 1000;
 }
-.options-list a {
+
+.profile-options-list a {
     text-decoration: none;
     color: inherit;
 }
-.options-list li {
+
+.profile-options-list li {
     display: flex;
     align-items: center;
     user-select: none;
     padding-bottom: 1em;
     line-height: 0;
 }
-.options-list li:last-child {
+
+.profile-options-list li:last-child {
     padding-bottom: 0;
 }
-.options:not(.options--active) {
+
+.profile-options:not(.options--active) {
     display: none;
+}
+
+.options {
+    display: none;
+}
+
+
+/* Estilos para el botón de menú */
+.burger-button {
+    display: none;
+}
+
+#logo_desktop {
+    display: block;
+}
+
+#logo_mobile {
+    display: none;
+}
+
+.login_account_image {
+    display: none;
+}
+
+#myLinks {
+    display: none;
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .header {
+        position: relative;
+        height: 150px;
+        display: block;
+        align-items: center;
+        padding: 0;
+        background-color: #ffffff;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        background-image: none;
+    }
+
+    /* Navbar para desktops no se verá a priori */
+    .navbar {
+        display: none;
+    }
+
+    #logo_desktop {
+        display: none;
+    }
+
+    .header_login_button {
+        display: none;
+    }
+
+    /* Elementos del navbar para móviles */
+    .burger-button {
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    #logo_mobile {
+        display: block;
+        margin: 10px;
+        height: auto;
+        max-height: 250px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .login_account_image {
+        display: block;
+        width: 50px; /* Ajusta el ancho de la imagen */
+        height: 50px; /* Ajusta la altura de la imagen */
+    }
+
+    /* Opciones para visualizar correctamente el navbar para móviles */
+    .mobile-navbar {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        overflow: hidden;
+        background-color: #ffffff;
+        position: relative;
+    }
+
+    #myLinks {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 250px;
+        left: 0;
+        background-color: white;
+        z-index: 999;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    #myLinks a {
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+        width: 100%;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+}
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        height: 150px;
+        display: block;
+        align-items: center;
+        padding: 0;
+        background-color: #ffffff;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        background-image: none;
+    }
+
+    /* Navbar para desktops no se verá a priori */
+    .navbar {
+        display: none;
+    }
+
+    #logo_desktop {
+        display: none;
+    }
+
+    .header_login_button {
+        display: none;
+    }
+
+    /* Elementos del navbar para móviles */
+    .burger-button {
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    #logo_mobile {
+        display: block;
+        margin: 10px;
+        height: auto;
+        max-height: 250px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .login_account_image {
+        display: block;
+        width: 50px; /* Ajusta el ancho de la imagen */
+        height: 50px; /* Ajusta la altura de la imagen */
+    }
+
+    /* Opciones para visualizar correctamente el navbar para móviles */
+    .mobile-navbar {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        overflow: hidden;
+        background-color: #ffffff;
+        position: relative;
+    }
+
+    #myLinks {
+        display: none;
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        background-color: white;
+        z-index: 9999;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    #myLinks a {
+        color: black;
+        padding: 30px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+        width: 100%;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
 }

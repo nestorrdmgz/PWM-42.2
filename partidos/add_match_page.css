@@ -22,7 +22,6 @@
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
 }
 .add-match-form {
-    width: 700px;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
@@ -100,4 +99,32 @@
 .add-match-button:hover {
     border-color: #BF2626;
     background-color: #BF2626;
+}
+@media screen and (max-width: 768px) {
+    .add-match-contenido {
+        background-color: white;
+        align-content: center;
+    }
+    .title_add_match {
+        margin-top: 100px;
+        width: 100%;
+    }
+    #map {
+        height: 500px;
+        width: 500px;
+    }
+    #selected-location, #for_selected {
+    }
+    .name-input {
+        width: 50%;
+    }
+    #modalidad {
+        width: 50%;
+    }
+    #datetime-input {
+        width: 50%;
+    }
+    #selected-location {
+        display: none;
+    }
 }

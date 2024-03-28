@@ -1,4 +1,4 @@
-
+/*
 // Función para cargar el header
 function loadHeader() {
     fetch('../templates/header.html')
@@ -8,6 +8,30 @@ function loadHeader() {
         })
         .catch(error => console.error('Error cargando el header:', error));
 }
+*/
+// Función para cargar el header
+function loadHeader() {
+    fetch('../templates/header.html')
+        .then(response => response.text())
+        .then(html => {
+            // Crear un elemento div para contener el HTML cargado
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+
+            // Extraer y ejecutar los scripts dentro del HTML cargado
+            const scripts = tempDiv.getElementsByTagName('script');
+            for (let i = 0; i < scripts.length; i++) {
+                const script = document.createElement('script');
+                script.textContent = scripts[i].textContent;
+                document.body.appendChild(script);
+            }
+
+            // Insertar el HTML cargado en el contenedor deseado
+            document.getElementById('header-container').appendChild(tempDiv);
+        })
+        .catch(error => console.error('Error cargando el header:', error));
+}
+
 // Función para cargar el header
 function loadLoggedHeader() {
     fetch('../templates/header_with_login.html')
@@ -25,32 +49,5 @@ function loadFooter() {
             document.getElementById('footer-container').innerHTML = html;
         })
         .catch(error => console.error('Error cargando el footer:', error));
-}
-
-function loadImage_profile() {
-    fetch('../components/image_profile.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('image-container').innerHTML = html;
-        })
-        .catch(error => console.error('Error cargando el container:', error));
-}
-
-function loadInfo_account() {
-    fetch('../components/info_account.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('info_account-container').innerHTML = html;
-        })
-        .catch(error => console.error('Error cargando el container:', error));
-}
-
-function loadPersonal_info() {
-    fetch('../components/personal_info.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('personal_info-container').innerHTML = html;
-        })
-        .catch(error => console.error('Error cargando el container:', error));
 }
 

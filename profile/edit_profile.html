@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="edit_profile.css">
     <link rel="stylesheet" href="../templates/header.css">
     <link rel="stylesheet" href="../templates/footer.css">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="../templates/templatesEvents.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
+<div w3-include-html="../templates/header.html"></div>
 <main>
     <section class="card">
         <form class="card-form">
@@ -18,8 +20,8 @@
                 <img id="profile-image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Foto de perfil">
             </div>
             <div>
-                <input type="text" placeholder="Nombre" required>
-                <input type="text" placeholder="Apellidos" required>
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellidos" placeholder="Apellidos" required>
             </div>
             <input type="email" placeholder="Correo electrónico" required>
             <div class="island_and_place">
@@ -42,7 +44,10 @@
                 </label>
             </div>
             <div>
-                <input type="number" placeholder="Altura (cm)" min="150" max="230" required>
+                <label>
+                    Altura:
+                    <input type="number" placeholder="Altura (cm)" min="150" max="230" required>
+                </label>
                 <label>
                     Posición:
                     <select id="position" class="edit-page-positioninput input">
@@ -58,7 +63,7 @@
         </form>
     </section>
 </main>
-<footer id="footer-container"></footer>
+<div w3-include-html="../templates/footer.html"></div>
 <script src="../scripts/header_footer.js"></script>
 <script src="../scripts/isla_y_municipio.js"></script>
 <script>
@@ -71,6 +76,7 @@
         }
         loadFooter();
     });
+    w3IncludeHTML();
 </script>
 </body>
 </html>

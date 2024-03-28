@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <title>Regístrate</title>
     <link rel="stylesheet" href="login_register_page.css">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="../templates/templatesEvents.js"></script>
+    <link rel="stylesheet" href="../templates/header.css">
 </head>
 <body>
+<div w3-include-html="../templates/header.html"></div>
 <div class="register-page-container">
+    <div class="logo-mobile-container">
+        <span class="slogan-mobile">Únete ya al Dream Team de jugadores que se han ligado a nuestra plataforma</span>
+    </div>
     <img alt="image" src="../images/logoLogin.png" class="logo-login"/>
     <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
     <form class="register-page-form" action="../homepage/homepage.html">
@@ -98,5 +105,8 @@
     </form>
 </div>
 <script src="../scripts/isla_y_municipio.js"></script>
+<script>
+    w3IncludeHTML();
+</script>
 </body>
 </html>

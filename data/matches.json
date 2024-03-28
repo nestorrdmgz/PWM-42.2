@@ -1,0 +1,36 @@
+{
+  "partidos": [
+    {
+      "nombre": "Partido de Baloncesto 1",
+      "lugar": "IES Schamann",
+      "modalidad": "5 vs 5",
+      "fechaHora": "2024-04-15T18:00:00",
+      "equipos": [
+        {
+          "nombre": "Equipo A",
+          "jugadores": [1, 2, 3]
+        },
+        {
+          "nombre": "Equipo B",
+          "jugadores": [4, 5, 6]
+        }
+      ]
+    },
+    {
+      "nombre": "Partido de Baloncesto 2",
+      "lugar": "IES Valsequillo",
+      "modalidad": "3 vs 3",
+      "fechaHora": "2024-04-20T20:00:00",
+      "equipos": [
+        {
+          "nombre": "Equipo A",
+          "jugadores": [1, 2]
+        },
+        {
+          "nombre": "Equipo B",
+          "jugadores": [3, 4, 6]
+        }
+      ]
+    }
+  ]
+}

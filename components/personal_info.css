@@ -1,4 +1,5 @@
 .datos-personales {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     text-align: left;
@@ -20,4 +21,21 @@
 
 .datos-personales ul li:last-child {
     margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .nombre,
+    .altura,
+    .isla,
+    .categoria,
+    .posicion,
+    .municipio {
+        width: 100%;
+        text-align: center;
+    }
 }

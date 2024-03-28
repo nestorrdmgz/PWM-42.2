@@ -1,0 +1,180 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Gómez",
+      "email": "juan@example.com",
+      "altura": 185,
+      "isla": "Gran Canaria",
+      "municipio": "Teror",
+      "partidos": 40,
+      "foto": "https://fotografias.lasexta.com/clipping/cmsimages02/2022/09/17/56F559ED-EE5D-4E7E-997A-9F2509BE72FE/michael-jordan-bulls_98.jpg?crop=1200,675,x0,y0&width=1900&height=1069&optimize=low&format=webply"
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellido": "López",
+      "email": "maria@example.com",
+      "altura": 185,
+      "isla": "Gran Canaria",
+      "municipio": "Telde",
+      "partidos": 90,
+      "foto": "https://www.freestock.com/450/freestock_37535473.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Pedro",
+      "apellido": "Martínez",
+      "email": "pedro@example.com",
+      "altura": 185,
+      "isla": "Gran Canaria",
+      "municipio": "Las Palmas de Gran Canaria",
+      "partidos": 10,
+      "foto": "https://images2.minutemediacdn.com/image/upload/c_crop,w_3238,h_1821,x_528,y_399/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/12up_es_international_web/01fwhc6dzh7hhb9vffnc.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Ana",
+      "apellido": "Sánchez",
+      "email": "ana@example.com",
+      "altura": 170,
+      "isla": "Tenerife",
+      "municipio": "Santa Cruz de Tenerife",
+      "partidos": 60,
+      "foto": "https://olimpicas.esportiva.net/wp-content/uploads/2021/06/9-Palau.png"
+    },
+    {
+      "id": 5,
+      "nombre": "David",
+      "apellido": "Rodríguez",
+      "email": "david@example.com",
+      "altura": 190,
+      "isla": "Tenerife",
+      "municipio": "La Laguna",
+      "partidos": 80,
+      "foto": null
+    },
+    {
+      "id": 6,
+      "nombre": "Elena",
+      "apellido": "Pérez",
+      "email": "elena@example.com",
+      "altura": 175,
+      "isla": "Fuerteventura",
+      "municipio": "Puerto del Rosario",
+      "partidos": 30,
+      "foto": null
+    },
+    {
+      "id": 7,
+      "nombre": "Carlos",
+      "apellido": "Hernández",
+      "email": "carlos@example.com",
+      "altura": 180,
+      "isla": "Fuerteventura",
+      "municipio": "Tuineje",
+      "partidos": 20,
+      "foto": null
+    },
+    {
+      "id": 8,
+      "nombre": "Sara",
+      "apellido": "García",
+      "email": "sara@example.com",
+      "altura": 172,
+      "isla": "Lanzarote",
+      "municipio": "Arrecife",
+      "partidos": 45,
+      "foto": null
+    },
+    {
+      "id": 9,
+      "nombre": "Pablo",
+      "apellido": "Fernández",
+      "email": "pablo@example.com",
+      "altura": 182,
+      "isla": "Lanzarote",
+      "municipio": "Teguise",
+      "partidos": 70,
+      "foto": null
+    },
+    {
+      "id": 10,
+      "nombre": "Lucía",
+      "apellido": "Martín",
+      "email": "lucia@example.com",
+      "altura": 168,
+      "isla": "La Palma",
+      "municipio": "Santa Cruz de La Palma",
+      "partidos": 25,
+      "foto": null
+    },
+    {
+      "id": 11,
+      "nombre": "Adrián",
+      "apellido": "Herrera",
+      "email": "adrian@example.com",
+      "altura": 188,
+      "isla": "La Palma",
+      "municipio": "Los Llanos de Aridane",
+      "partidos": 55,
+      "foto": null
+    },
+    {
+      "id": 12,
+      "nombre": "Isabel",
+      "apellido": "Díaz",
+      "email": "isabel@example.com",
+      "altura": 170,
+      "isla": "El Hierro",
+      "municipio": "Valverde",
+      "partidos": 15,
+      "foto": null
+    },
+    {
+      "id": 13,
+      "nombre": "Javier",
+      "apellido": "Alonso",
+      "email": "javier@example.com",
+      "altura": 176,
+      "isla": "El Hierro",
+      "municipio": "La Frontera",
+      "partidos": 35,
+      "foto": null
+    },
+    {
+      "id": 14,
+      "nombre": "Carmen",
+      "apellido": "Gutierrez",
+      "email": "carmen@example.com",
+      "altura": 165,
+      "isla": "La Gomera",
+      "municipio": "San Sebastián de La Gomera",
+      "partidos": 50,
+      "foto": null
+    },
+    {
+      "id": 15,
+      "nombre": "Francisco",
+      "apellido": "Cabrera",
+      "email": "francisco@example.com",
+      "altura": 178,
+      "isla": "La Gomera",
+      "municipio": "Vallehermoso",
+      "partidos": 65,
+      "foto": null
+    },
+    {
+      "id": 16,
+      "nombre": "Pedro",
+      "apellido": "Guerra",
+      "email": "pedro@example.com",
+      "altura": 178,
+      "isla": "Gran Canaria",
+      "municipio": "Telde",
+      "partidos": 150,
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/PauCaptura.jpg/220px-PauCaptura.jpg"
+    }
+  ]
+}

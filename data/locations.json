@@ -1,0 +1,85 @@
+{
+  "locations": [
+    {
+      "name": "Instalaciones Polideportivas Pepe Armas",
+      "coordinates": [
+        28.09798,
+        -15.45714
+      ],
+      "iluminacion": true,
+      "foto": "https://estaticos-cdn.prensaiberica.es/clip/31d46d17-8d16-4682-92bd-8bb1b363eab4_16-9-aspect-ratio_default_0.jpg"
+    },
+    {
+      "name": "Pabellón polideportivo ULPGC",
+      "coordinates": [
+        28.06861,
+        -15.4561
+      ],
+      "iluminacion": true,
+      "foto": "https://cdn.cbgrancanaria.net/2022/11/09185557/GCULPGC11-1024x580.png"
+    },
+    {
+      "name": "Canchas Deportivas Alcaravaneras",
+      "coordinates": [
+        28.1331,
+        -15.42888
+      ],
+      "iluminacion": true,
+      "foto": "https://i.ytimg.com/vi/GWQdnc_imOE/maxresdefault.jpg"
+    },
+    {
+      "name": "Pabellón Insular Rita Hernández",
+      "coordinates": [
+        28.00358,
+        -15.40408
+      ],
+      "iluminacion": false,
+      "foto": "https://www.teldeporte.com/wp-content/uploads/2022/12/1-canchas-rita-hernanadez.jpg"
+    },
+    {
+      "name": "Pabellón Exterior Narea",
+      "coordinates": [
+        27.99852,
+        -15.41178
+      ],
+      "iluminacion": false,
+      "foto": null
+    },
+    {
+      "name": "IES Valsequillo",
+      "coordinates": [
+        27.99477,
+        -15.49841
+      ],
+      "iluminacion": true,
+      "foto": "https://lh3.googleusercontent.com/proxy/DoPBcgHZAh0pE3cZofTgs1NY_q_IX9xpdsyIMcz7zF-kYryShaC68tzrN5IBs1MdOUSpLZMk0kl5fpfkjPQA4V9UyP3cGgrJ6hVe3-m80iF1VsVXlGIhOF73LcLCHLGEeelPiFTy77AqLbL2NAQh"
+    },
+    {
+      "name": "IES Schamann",
+      "coordinates": [
+        28.11102,
+        -15.43537
+      ],
+      "iluminacion": true,
+      "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS_SJdhNU9nnAYe4z7FqHFI9ga24LUo77R6w&usqp=CAU"
+    },
+    {
+      "name": "Pabellón Nicolas González Vega",
+      "coordinates": [
+        27.91849,
+        -15.42485
+      ],
+      "iluminacion": true,
+      "foto": "https://ingenio.es/wp-content/uploads/2022/01/VISITA-MEJORAS-PABELLON-NICOLAS-GONZALEZ-2.jpg"
+    },
+    {
+      "name": "Instalaciones Polideportivas de Guanarteme",
+      "coordinates": [
+        28.13392,
+        -15.44049
+      ],
+      "iluminacion": true,
+      "foto": "https://estaticos-cdn.prensaiberica.es/clip/4b524e70-431e-4d74-bd5c-c5a8492504f2_16-9-aspect-ratio_default_0.jpg"
+    }
+  ]
+}
