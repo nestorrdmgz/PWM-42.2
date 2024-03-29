@@ -49,10 +49,7 @@ main {
     background-color: #ddd;
 }
 
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
+@media screen and (min-width: 769px) and (max-width: 1400px) {
     main {
         margin-top: 100px;
     }

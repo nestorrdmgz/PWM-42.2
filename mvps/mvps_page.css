@@ -68,6 +68,12 @@ body {
     flex: 1;
     overflow-y: auto; /* Añade una barra de desplazamiento vertical si el contenido es demasiado largo */
 }
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .title_mvps {
+        margin-top: 150px;
+        width: 80%;
+    }
+}
 @media screen and (max-width: 768px) {
     .mvps_contenido {
         background-color: white;

@@ -20,7 +20,7 @@ body {
 .logo-login {
     position: absolute;
     top: 60%;
-    transform: translateY(-110%);
+    transform: translateY(-130%);
     left: 20px;
     width: 500px;
     height: auto; /* Mantiene la proporción de la imagen */
@@ -41,7 +41,7 @@ body {
     top: 96px;
     right: 106px;
     width: 655px;
-    height: 390px;
+    height: 470px;
     display: flex;
     position: absolute;
     align-items: center;
@@ -64,6 +64,9 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+}
+.login-page-inputs label{
+    margin-top: 20px;
 }
 .login-page-mailinput,
 .login-page-passwdinput {
@@ -234,7 +237,7 @@ body {
 .slogan-mobile {
     display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
     .register-page-container,
     .login-page-container {
         width: 100%;
@@ -315,5 +318,10 @@ body {
     .register-page-navlink,
     .checkbox-container a{
         color: black;
+    }
+}
+@media screen and (min-width: 1401px) {
+    .log-header {
+        display: none;
     }
 }

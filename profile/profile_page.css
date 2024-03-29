@@ -104,3 +104,12 @@ main {
         text-align: center;
     }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    main {
+        margin-top: 200px;
+    }
+    #personal_info-container {
+        margin-top: -180px;
+    }
+}

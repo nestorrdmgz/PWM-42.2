@@ -176,3 +176,11 @@ and (orientation : portrait) {
         display: none;
     }
 }
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .canchas-contenido {
+        margin-top: 100px;
+    }
+    .title_canchas {
+        width: 100%;
+    }
+}

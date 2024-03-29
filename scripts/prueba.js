@@ -24,7 +24,7 @@ function loadMatchDetails() {
             "equipos": [
                 {
                     "nombre": "Equipo A",
-                    "jugadores": [1, 2]
+                    "jugadores": [1, 2, 4]
                 },
                 {
                     "nombre": "Equipo B",
