@@ -13,13 +13,15 @@
 <main class="canchas-contenido">
     <a href="canchas_page.html" class="back-button">&#8249;</a>
     <h1 class="title_canchas">AÑADIR CANCHA</h1>
-    <form class="add-cancha-page-form">
+    <form class="add-cancha-page-form" id="new-court">
         <label>
             Nombre:
             <input
                     type="text"
                     placeholder="Nombre"
                     class="add-cancha-page-nameinput input"
+                    id="name"
+                    name="name"
                     required
             />
         </label>
@@ -29,7 +31,7 @@
             <div id="map"></div>
         </div>
         <div class="checkbox-container">
-            <input type="checkbox" id="light-checkbox" class="light-checkbox">
+            <input type="checkbox" id="light-checkbox" class="light-checkbox"  name="light-checkbox">
             <label for="light-checkbox" class="light-label">La cancha está iluminada</label>
         </div>
 
@@ -40,7 +42,7 @@
             <div id="image-preview"></div>
         </div>
 
-        <button id="add-court-button" class="button" onclick="window.location.href='canchas_page.html';">Añadir</button>
+        <input type="submit" class="button" value="Añadir" id="add-court-button" name="add-court-button">
     </form>
 </main>
 <footer id="footer-container"></footer>
@@ -96,5 +98,6 @@
         // Aquí deberías enviar los datos al servidor para que los procese y actualice el archivo JSON correspondiente
     });
 </script>
+<script src="../scripts/add_court.js"></script>
 </body>
 </html>

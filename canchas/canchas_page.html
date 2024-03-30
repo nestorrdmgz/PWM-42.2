@@ -21,11 +21,10 @@
         <span id="selected-location"></span>
         <div id="map"></div>
     </div>
-    <a href="cancha_details_page.html" class="details-button" onclick="storeSelectedLocation(document.getElementById('selected-location').textContent)">Detalles de la cancha</a>
+    <a href="cancha_details_page.html" class="details-button" onclick="storeSelectedCourtId()">Detalles de la cancha</a>
 </main>
 <div w3-include-html="../templates/footer.html"></div>
 <script src="../scripts/localizaciones.js"></script>
-<script src="../scripts/selectedLocation.js"></script>
 <script>
     w3IncludeHTML();
     // Llama a las funciones de carga cuando se carga la página

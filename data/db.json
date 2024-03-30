@@ -18,7 +18,7 @@
       ],
       "followers": 250,
       "following": 150,
-      "matches_played": 0
+      "matches_played": 10
     },
     {
       "userId": "2",
@@ -50,7 +50,7 @@
         -15.45714
       ],
       "ilumination": true,
-      "foto": "https://estaticos-cdn.prensaiberica.es/clip/31d46d17-8d16-4682-92bd-8bb1b363eab4_16-9-aspect-ratio_default_0.jpg"
+      "photo": "https://estaticos-cdn.prensaiberica.es/clip/31d46d17-8d16-4682-92bd-8bb1b363eab4_16-9-aspect-ratio_default_0.jpg"
     },
     {
       "id": "2",
@@ -60,7 +60,7 @@
         -15.4561
       ],
       "ilumination": true,
-      "foto": "https://cdn.cbgrancanaria.net/2022/11/09185557/GCULPGC11-1024x580.png"
+      "photo": "https://cdn.cbgrancanaria.net/2022/11/09185557/GCULPGC11-1024x580.png"
     }
   ],
   "matches": [
