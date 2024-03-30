@@ -14,7 +14,7 @@
 <div w3-include-html="../templates/header.html"></div>
 <main class="add-match-contenido">
     <h1 class="title_add_match">AÑADIR PARTIDO</h1>
-    <form class="add-match-form">
+    <form class="add-match-form" id="match-form">
         <span class="add-match-message">¡Añade un partido y empieza a jugar ya!</span>
         <div>
             <label class="match-name">
@@ -23,6 +23,8 @@
                         type="text"
                         placeholder="Nombre del partido"
                         class="name-input input"
+                        id="name"
+                        name="name"
                         required
                 />
             </label>
@@ -33,12 +35,12 @@
         </div>
         <div class="match-datetime">
             <label for="datetime-input">Fecha y Hora:</label>
-            <input type="datetime-local" id="datetime-input" name="fecha_hora" required>
+            <input type="datetime-local" id="datetime-input" name="datetime-input" required>
         </div>
         <div class="match-modality">
             <label>
                 Modalidad:
-                <select id="modalidad" class="modalidad-input input">
+                <select id="modality" name="modality" class="modalidad-input input">
                     <option value="modalidad1">1 vs 1</option>
                     <option value="modalidad2">2 vs 2</option>
                     <option value="modalidad3">3 vs 3</option>
@@ -54,6 +56,7 @@
 <script src="../scripts/header_footer.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="../scripts/localizaciones.js"></script>
+<script src="../scripts/add_match.js"></script>
 <script>
     var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
     document.addEventListener('DOMContentLoaded', function () {
@@ -66,17 +69,6 @@
     });
     w3IncludeHTML();
 
-    document.getElementById('add-match-button').addEventListener('click', function (event) {
-        // Obtener la ubicación seleccionada
-        var selectedLocation = document.getElementById('selected-location').textContent;
-
-        // Validar si se ha seleccionado una ubicación
-        if (selectedLocation === 'Ubicación:') {
-            // Si no se ha seleccionado una ubicación, prevenir el envío del formulario
-            event.preventDefault();
-            alert('Por favor selecciona una ubicación');
-        }
-    });
 </script>
 </body>
 </html>
