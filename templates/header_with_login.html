@@ -17,13 +17,35 @@
         <a href="../nosotros_terms/nosotros_page.html" class="header_nav_button">NOSOTROS</a>
     </nav>
 
-    <button class="header_profile_button">Cuenta</button>
-    <div id="option-container" class="profile-options">
-        <ul class="profile-options-list">
-            <li><a href="../profile/own_profile.html">Mi perfil</a></li>
-            <li><a>Cerrar sesión</a></li>
-        </ul>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Mi Perfil</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="../profile/own_profile.html">Ver Perfil</a>
+            <a href="#">Cerrar Sesión</a>
+        </div>
     </div>
 </header>
 </body>
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+</script>
 </html>

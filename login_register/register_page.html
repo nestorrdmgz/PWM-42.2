@@ -16,7 +16,7 @@
     </div>
     <img alt="image" src="../images/logoLogin.png" class="logo-login"/>
     <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
-    <form class="register-page-form" action="../homepage/homepage.html">
+    <form id="register-form" class="register-page-form" action="../homepage/homepage.html">
         <span class="register-text">REGÍSTRATE</span>
         <div class="register-page-inputs">
             <label>
@@ -24,6 +24,8 @@
                         type="text"
                         placeholder="Nombre"
                         class="register-page-nameinput input"
+                        id="name"
+                        name="name"
                         required
                 />
             </label>
@@ -32,6 +34,8 @@
                         type="text"
                         placeholder="Apellidos"
                         class="register-page-surnameinput input"
+                        id="surname"
+                        name="surname"
                         required
                 />
             </label>
@@ -40,6 +44,8 @@
                         type="email"
                         placeholder="Correo electrónico"
                         class="register-page-mailinput input"
+                        id="email"
+                        name="email"
                         required
                 />
             </label>
@@ -48,13 +54,15 @@
                         type="password"
                         placeholder="Contraseña"
                         class="register-page-passwdinput input"
+                        id="password"
+                        name="password"
                         required
                 />
             </label>
             <div class="island_and_place">
                 <label>
                     Isla:
-                    <select id="island" class="register-page-islandinput input">
+                    <select id="island" name="island" class="register-page-islandinput input">
                         <option value="isla1">Gran Canaria</option>
                         <option value="isla2">Tenerife</option>
                         <option value="isla3">La Palma</option>
@@ -67,7 +75,7 @@
                 </label>
                 <label>
                     Municipio:
-                    <select id="municipality" class="register-page-placedinput input"></select>
+                    <select id="municipality" name="municipality" class="register-page-placedinput input"></select>
                 </label>
             </div>
             <div class="height_and_position">
@@ -78,6 +86,7 @@
                             placeholder="Altura (cm)"
                             class="register-page-heightinput input"
                             id="height"
+                            name="height"
                             min="150"
                             max="230"
                             required
@@ -85,7 +94,7 @@
                 </label>
                 <label>
                     Posición:
-                    <select id="position" class="register-page-positioninput input">
+                    <select id="position" name="position" class="register-page-positioninput input">
                         <option value="Base">Base</option>
                         <option value="Escolta">Escolta</option>
                         <option value="Alero">Alero</option>
@@ -105,6 +114,7 @@
     </form>
 </div>
 <script src="../scripts/isla_y_municipio.js"></script>
+<script src="../scripts/sign_up.js"></script>
 <script>
     w3IncludeHTML();
 </script>

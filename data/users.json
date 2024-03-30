@@ -9,7 +9,8 @@
       "isla": "Gran Canaria",
       "municipio": "Teror",
       "partidos": 40,
-      "foto": "https://fotografias.lasexta.com/clipping/cmsimages02/2022/09/17/56F559ED-EE5D-4E7E-997A-9F2509BE72FE/michael-jordan-bulls_98.jpg?crop=1200,675,x0,y0&width=1900&height=1069&optimize=low&format=webply"
+      "foto": "https://fotografias.lasexta.com/clipping/cmsimages02/2022/09/17/56F559ED-EE5D-4E7E-997A-9F2509BE72FE/michael-jordan-bulls_98.jpg?crop=1200,675,x0,y0&width=1900&height=1069&optimize=low&format=webply",
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
       "isla": "Gran Canaria",
       "municipio": "Telde",
       "partidos": 90,
-      "foto": "https://www.freestock.com/450/freestock_37535473.jpg"
+      "foto": "https://www.freestock.com/450/freestock_37535473.jpg",
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 3,
@@ -31,7 +33,8 @@
       "isla": "Gran Canaria",
       "municipio": "Las Palmas de Gran Canaria",
       "partidos": 10,
-      "foto": "https://images2.minutemediacdn.com/image/upload/c_crop,w_3238,h_1821,x_528,y_399/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/12up_es_international_web/01fwhc6dzh7hhb9vffnc.jpg"
+      "foto": "https://images2.minutemediacdn.com/image/upload/c_crop,w_3238,h_1821,x_528,y_399/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/12up_es_international_web/01fwhc6dzh7hhb9vffnc.jpg",
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 4,
@@ -42,7 +45,8 @@
       "isla": "Tenerife",
       "municipio": "Santa Cruz de Tenerife",
       "partidos": 60,
-      "foto": "https://olimpicas.esportiva.net/wp-content/uploads/2021/06/9-Palau.png"
+      "foto": "https://olimpicas.esportiva.net/wp-content/uploads/2021/06/9-Palau.png",
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 5,
@@ -53,7 +57,8 @@
       "isla": "Tenerife",
       "municipio": "La Laguna",
       "partidos": 80,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 6,
@@ -64,7 +69,8 @@
       "isla": "Fuerteventura",
       "municipio": "Puerto del Rosario",
       "partidos": 30,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 7,
@@ -75,7 +81,8 @@
       "isla": "Fuerteventura",
       "municipio": "Tuineje",
       "partidos": 20,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 8,
@@ -86,7 +93,8 @@
       "isla": "Lanzarote",
       "municipio": "Arrecife",
       "partidos": 45,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 9,
@@ -97,7 +105,8 @@
       "isla": "Lanzarote",
       "municipio": "Teguise",
       "partidos": 70,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 10,
@@ -108,7 +117,8 @@
       "isla": "La Palma",
       "municipio": "Santa Cruz de La Palma",
       "partidos": 25,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 11,
@@ -119,7 +129,8 @@
       "isla": "La Palma",
       "municipio": "Los Llanos de Aridane",
       "partidos": 55,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 12,
@@ -130,7 +141,8 @@
       "isla": "El Hierro",
       "municipio": "Valverde",
       "partidos": 15,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 13,
@@ -141,7 +153,8 @@
       "isla": "El Hierro",
       "municipio": "La Frontera",
       "partidos": 35,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 14,
@@ -152,7 +165,8 @@
       "isla": "La Gomera",
       "municipio": "San Sebastián de La Gomera",
       "partidos": 50,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 15,
@@ -163,7 +177,8 @@
       "isla": "La Gomera",
       "municipio": "Vallehermoso",
       "partidos": 65,
-      "foto": null
+      "foto": null,
+      "canchas_favoritas": [1,2,3]
     },
     {
       "id": 16,
@@ -174,7 +189,8 @@
       "isla": "Gran Canaria",
       "municipio": "Telde",
       "partidos": 150,
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/PauCaptura.jpg/220px-PauCaptura.jpg"
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/PauCaptura.jpg/220px-PauCaptura.jpg",
+      "canchas_favoritas": [1,2,3]
     }
   ]
 }

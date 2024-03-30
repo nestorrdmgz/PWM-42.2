@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Inicia sesión</title>
@@ -16,7 +16,7 @@
     </div>
     <img alt="image" src="../images/logoLogin.png" class="logo-login"/>
     <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
-    <form class="login-page-form">
+    <form class="login-page-form" id="login-form">
         <span class="login-text">INICIA SESIÓN</span>
         <div class="login-page-inputs">
             <label>
@@ -25,6 +25,8 @@
                         type="email"
                         placeholder="Correo electrónico"
                         class="login-page-mailinput input"
+                        id="email"
+                        name="email"
                 />
             </label>
             <label>
@@ -33,6 +35,8 @@
                         type="password"
                         placeholder="Contraseña"
                         class="login-page-passwdinput input"
+                        id="password"
+                        name="password"
                 />
             </label>
             <input type="submit" class="login-button button" value="LOGIN">
@@ -44,5 +48,6 @@
 <script>
     w3IncludeHTML();
 </script>
+<script src="../scripts/login.js"></script>
 </body>
 </html>

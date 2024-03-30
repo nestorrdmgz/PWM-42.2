@@ -11,7 +11,7 @@ function loadHeader() {
 */
 // Función para cargar el header
 function loadHeader() {
-    fetch('../templates/header.html')
+    fetch('../templates/header_with_login.html')
         .then(response => response.text())
         .then(html => {
             // Crear un elemento div para contener el HTML cargado

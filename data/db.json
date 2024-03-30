@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "userId": "1",
+      "name": "Néstor Román",
+      "surname": "Domínguez Moreno",
+      "email": "nestorrdmgz@gmail.com",
+      "password": "654321",
+      "height": 185,
+      "island": "Gran Canaria",
+      "municipality": "Teror",
+      "matchs": 40,
+      "foto": "https://fotografias.lasexta.com/clipping/cmsimages02/2022/09/17/56F559ED-EE5D-4E7E-997A-9F2509BE72FE/michael-jordan-bulls_98.jpg?crop=1200,675,x0,y0&width=1900&height=1069&optimize=low&format=webply",
+      "favourite_courts": [
+        1,
+        2,
+        3
+      ],
+      "followers": 250,
+      "following": 150,
+      "matches_played": 0
+    },
+    {
+      "userId": "2",
+      "name": "Martina",
+      "surname": "Pérez",
+      "email": "martina@gmail.com",
+      "password": "123456",
+      "height": 185,
+      "island": "Gran Canaria",
+      "municipality": "Teror",
+      "matchs": 40,
+      "foto": "https://www.freestock.com/450/freestock_37535473.jpg",
+      "favourite_courts": [
+        1,
+        2,
+        3
+      ],
+      "followers": 160,
+      "following": 290,
+      "matches_played": 0
+    }
+  ],
+  "courts": [
+    {
+      "id": "1",
+      "name": "Instalaciones Polideportivas Pepe Armas",
+      "coordinates": [
+        28.09798,
+        -15.45714
+      ],
+      "ilumination": true,
+      "foto": "https://estaticos-cdn.prensaiberica.es/clip/31d46d17-8d16-4682-92bd-8bb1b363eab4_16-9-aspect-ratio_default_0.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Pabellón polideportivo ULPGC",
+      "coordinates": [
+        28.06861,
+        -15.4561
+      ],
+      "ilumination": true,
+      "foto": "https://cdn.cbgrancanaria.net/2022/11/09185557/GCULPGC11-1024x580.png"
+    }
+  ],
+  "matches": [
+    {
+      "id": "1",
+      "name": "Partido de Baloncesto 1",
+      "ubication": 1,
+      "modality": "3 vs 3",
+      "date": "2024-04-15T18:00:00",
+      "teams": [
+        {
+          "name": "Equipo A",
+          "players": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "Equipo B",
+          "players": [
+            4,
+            5,
+            6
+          ]
+        }
+      ]
+    }
+  ]
+}
