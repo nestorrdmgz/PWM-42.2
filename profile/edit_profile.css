@@ -122,3 +122,110 @@ input:last-child{
     padding: 0; /* Elimina el relleno por defecto del body */
     overflow: hidden; /* Evita la barra de desplazamiento horizontal */
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: -180px;
+        background-color: white;
+        background-image: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -110px;
+    }
+    .card {
+        border: none;
+        background-color: white;
+        width: 90%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-container {
+        text-align: center;
+    }
+    .profile-container img {
+        max-width: 100%;
+        border-radius: 50%;
+    }
+    #nombre,
+    #apellidos,
+    #island,
+    #municipality,
+    #position,
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ff7c00;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 90%;
+        padding: 10px;
+        background-color: #ff7c00;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    main {
+        margin-top: 50px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -110px;
+    }
+    .card {
+        border: none;
+        background-color: white;
+        width: 90%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-container {
+        text-align: center;
+    }
+    .profile-container img {
+        max-width: 100%;
+        border-radius: 50%;
+    }
+    #nombre,
+    #apellidos,
+    #island,
+    #municipality,
+    #position,
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ff7c00;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 90%;
+        padding: 10px;
+        background-color: #ff7c00;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

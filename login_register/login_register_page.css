@@ -20,7 +20,7 @@ body {
 .logo-login {
     position: absolute;
     top: 60%;
-    transform: translateY(-110%);
+    transform: translateY(-130%);
     left: 20px;
     width: 500px;
     height: auto; /* Mantiene la proporción de la imagen */
@@ -41,7 +41,7 @@ body {
     top: 96px;
     right: 106px;
     width: 655px;
-    height: 390px;
+    height: 470px;
     display: flex;
     position: absolute;
     align-items: center;
@@ -64,6 +64,9 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+}
+.login-page-inputs label{
+    margin-top: 20px;
 }
 .login-page-mailinput,
 .login-page-passwdinput {
@@ -157,6 +160,7 @@ body {
 .terms-label a {
     color: white; /* Cambia el color del texto del enlace a azul */
 }
+
 .register-button {
     color: #ffffff;
     width: 166px;
@@ -221,4 +225,104 @@ body {
     border-radius: 10px; /* Ajusta el valor según lo redondeado que desees */
     border: 1px solid #ccc; /* Puedes agregar un borde para resaltar el input */
     padding: 10px; /* Añade un espacio de relleno para separar el texto del borde */
+}
+.correo-span {
+    display: none;
+}
+.contraseña-span {
+    display: none;
+}
+.logo-mobile-container {
+    display: none;
+}
+.slogan-mobile {
+    display: none;
+}
+@media screen and (max-width: 1400px) {
+    .register-page-container,
+    .login-page-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: none;
+        background-position: center;
+        position: relative;
+    }
+    .logo-login {
+        display: none;
+    }
+    .logo-mobile-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column; /* Agregado: Cambiar a disposición en columna */
+        align-items: center; /* Agregado: Centrar elementos horizontalmente */
+    }
+    .slogan-mobile {
+        display: block; /* Cambiado: Cambiar a bloque para que aparezca debajo del logo */
+        color: black;
+        text-align: center; /* Agregado: Centrar el texto */
+        margin-top: 70px; /* Ajuste: Agregar margen superior para separarlo del logo */
+    }
+    .slogan {
+        display: none;
+    }
+    .register-page-form,
+    .login-page-form {
+        top: auto;
+        right: auto;
+        width: auto;
+        height: auto;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-image: none;
+    }
+    .register-text,
+    .login-text{
+        color: #FF7C00;
+        border: 4px solid #FF7C00;
+        background-color: white;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+        margin-top: 10px;
+    }
+    .login-page-mailinput {
+        margin: 10px;
+    }
+    .login-page-passwdinput {
+        margin: 10px;
+    }
+    label {
+        color: black;
+    }
+    .login-page-navlink,
+    .login-question {
+        display: flex;
+        color: black;
+        text-align: center;
+    }
+    .register-page-inputs,
+    .login-page-inputs {
+        margin-top: 10px;
+    }
+    .register-question,
+    .register-page-navlink,
+    .checkbox-container a{
+        color: black;
+    }
+}
+@media screen and (min-width: 1401px) {
+    .log-header {
+        display: none;
+    }
 }

@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="../templates/footer.css">
     <link rel="stylesheet" href="canchas_page.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
+    <script src="../templates/templatesEvents.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
-<div class="canchas-contenido">
+<div id="header-container"></div>
+<main class="canchas-contenido">
     <a href="canchas_page.html" class="back-button">&#8249;</a>
     <h1 class="title_canchas">DETALLES DE LA CANCHA</h1>
     <div class="cancha-details">
@@ -27,38 +28,25 @@
             <input type="checkbox" id="light-checkbox" class="light-checkbox" checked disabled>
             <label for="light-checkbox" class="light-label">La cancha está iluminada</label>
         </div>
-        <div class="court-image">
-            <div id="image-preview">
-                <img src="../images/default_image.jpg" alt="Imagen por defecto">
-            </div>
+        <div class="court-image" id="court-image-container">
+            <div id="image-preview"></div>
         </div>
     </div>
-</div>
-<footer id="footer-container"></footer>
+</main>
+<div id="footer-container"></div>
 <script src="../scripts/header_footer.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="../scripts/recuperar_localizacion.js"></script>
 <script>
-    // Llama a las funciones de carga cuando se carga la página
+    var isLoggedIn = false; // Variable que indica si el usuario ha iniciado sesión o no
+
     document.addEventListener('DOMContentLoaded', function () {
-        loadTemplate("../templates/header.html","header-container");
+        if (isLoggedIn) {
+            loadTemplate("../templates/header_with_login.html","header-container"); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+        } else {
+            loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+        }
         loadTemplate("../templates/footer.html","footer-container");
-    });
-
-    // Función para ver el lugar de la cancha en el mapa
-    const locations = [
-        {name: 'Pabellón polideportivo ULPGC', coordinates: [28.06861, -15.45610]}
-    ];
-
-    const map = L.map('map').setView([28.09973, -15.41343], 12);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-    }).addTo(map);
-
-    locations.forEach(function (location) {
-        L.marker(location.coordinates).addTo(map).bindPopup(location.name).on('click', function () {
-            document.getElementById('place-input').value = location.name;
-        });
     });
 </script>
 </body>

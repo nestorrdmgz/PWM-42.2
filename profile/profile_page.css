@@ -79,7 +79,6 @@ main {
     display: flex;
     justify-content: space-between;
 }
-
 .canchas_favoritas li:last-child {
     margin-bottom: 45px;
 }
@@ -88,8 +87,29 @@ main {
     cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 150px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .datos-personales {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+}
 
-
-
-
-
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    main {
+        margin-top: 200px;
+    }
+    #personal_info-container {
+        margin-top: -180px;
+    }
+}

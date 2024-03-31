@@ -8,42 +8,41 @@
     <link rel="stylesheet" href="../components/add_match_filter_button.css">
     <link rel="stylesheet" href="../components/match_details.css">
     <link rel="stylesheet" href="partidos_page.css">
+    <script src="../templates/templatesEvents.js"></script>
+    <script src="../scripts/localizaciones.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
-<div id="partidos-contenido">
-    <div class="title-buttons">
-        <h1 class="title_partidos">TODOS LOS PARTIDOS</h1>
-        <div class="botones">
-            <div id="add_match"></div>
-            <div id="filter_button"></div>
+<div id="header-container"></div>
+<main>
+    <div id="partidos-contenido">
+        <div class="title-buttons">
+            <h1 class="title_partidos">TODOS LOS PARTIDOS</h1>
+            <div class="botones">
+                <div id="add_match"></div>
+                <div id="filter_button"></div>
+            </div>
         </div>
     </div>
-    <div class="match_details"></div>
-    <div class="match_details"></div>
-    <div class="match_details"></div>
-    <div class="pagination">
-        <a href="#">&laquo;</a>
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">6</a>
-        <a href="#">&raquo;</a>
-    </div>
-</div>
-<footer id="footer-container"></footer>
+</main>
+<div id="footer-container"></div>
 <script src="../scripts/header_footer.js"></script>
 <script src="../scripts/components.js"></script>
+<script src="../scripts/load_match_details.js"></script>
 <script>
-    // Llama a las funciones de carga cuando se carga la página
+    var isLoggedIn = false; // Variable que indica si el usuario ha iniciado sesión o no
+
     document.addEventListener('DOMContentLoaded', function () {
-        loadTemplate("../templates/header.html","header-container");
+        if (isLoggedIn) {
+            loadTemplate("../templates/header_with_login.html","header-container"); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+        } else {
+            loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+        }
         loadTemplate("../templates/footer.html","footer-container");
         loadAddMatch();
         loadFilterButton();
         loadMatchDetails();
+        getNumeroMaximoJugadores();
+        storeSelectedUser();
     });
 </script>
 </body>

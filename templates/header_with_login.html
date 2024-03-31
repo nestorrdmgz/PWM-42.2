@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <title>Profile Header</title>
     <link rel="stylesheet" href="header.css">
+    <script src="templatesEvents.js"></script>
 </head>
 <body>
 <header class="header">
-    <img src="../images/logoWebPrincipal.png" alt="Courtlink© Logo" class="header_logo">
-    <nav class="navbar">
+    <!-- Top Navigation Menu -->
+    <div class="mobile-navbar">
+        <!-- Burger button -->
+        <div id="burger-button" class="burger-button" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <i class="fa fa-bars"></i>
+        </div>
+        <img src="../images/logoFooterLetras.png" alt="Courtlink© Logo" class="header_logo" id="logo_mobile"
+             onclick="irAPaginaDeInicio()">
+        <a href="../login_register/login_page.html">
+            <img src="../images/user-icon.jpg" alt="Login" class="login_account_image">
+        </a>
+    </div>
+
+    <!-- Links adaptados para el header móvil -->
+    <div id="myLinks">
+        <a href="../homepage/homepage.html">Inicio</a>
+        <a href="../canchas/canchas_page.html">Canchas</a>
+        <a href="../partidos/partidos_page.html">Partidos</a>
+        <a href="../mvps/mvps_page.html">MVPs</a>
+        <a href="../nosotros_terms/nosotros_page.html">Nosotros</a>
+    </div>
+
+    <!-- Logo -->
+    <img src="../images/logoWebPrincipal.png" alt="Courtlink© Logo" class="header_logo" id="logo_desktop"
+         onclick="irAPaginaDeInicio()">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
         <a href="../homepage/homepage.html" class="header_nav_button">INICIO</a>
         <a href="../partidos/partidos_page.html" class="header_nav_button">PARTIDOS</a>
         <a href="../canchas/canchas_page.html" class="header_nav_button">CANCHAS</a>
@@ -17,46 +47,12 @@
     </nav>
 
     <button class="header_profile_button">Cuenta</button>
-    <div id="option-container" class="options">
-        <ul class="options-list">
+    <div id="option-container" class="profile-options">
+        <ul class="profile-options-list">
             <li><a href="../profile/own_profile.html">Mi perfil</a></li>
             <li><a>Cerrar sesión</a></li>
         </ul>
     </div>
-
 </header>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var button = document.querySelector(".header_profile_button");
-        var container = document.getElementById("option-container");
-        button.onclick = function (e) {
-            e.stopPropagation();
-            container.classList.toggle("options--active");
-        };
-        container.onclick = function (e) {
-            e.stopPropagation();
-        };
-        window.onclick = function () {
-            container.classList.remove("options--active");
-        };
-        var input = document.querySelectorAll("input[type=checkbox]");
-        for (var i = 0; i < input.length; i++) {
-            input[i].onclick = function () {
-                var isChecked = false;
-                for (var j = 0; j < input.length; j++) {
-                    if (input[j].checked) {
-                        isChecked = true;
-                        break;
-                    }
-                }
-                if (isChecked) {
-                    button.classList.add("button--highlight");
-                } else {
-                    button.classList.remove("button--highlight");
-                }
-            };
-        }
-    });
-</script>
 </body>
 </html>

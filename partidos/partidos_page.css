@@ -1,5 +1,7 @@
-#partidos-contenido {
+main {
     font-family: Arial, Helvetica, sans-serif;
+}
+#partidos-contenido {
     width: 100%;
     padding: 48px;
     background-color: #D9D9D9;
@@ -45,4 +47,46 @@
 }
 .pagination a:hover:not(.active) {
     background-color: #ddd;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    main {
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 100px;
+        align-items: center;
+        background-color: white;
+    }
+    #partidos-contenido {
+        background-color: white;
+    }
+    .title-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title_partidos {
+        color: #FF7C00;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-left: auto; /* Alinea el título a la derecha */
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #add_match,
+    #filter_button {
+        margin-bottom: 5px; /* Ajusta el margen entre los botones si es necesario */
+    }
+
 }

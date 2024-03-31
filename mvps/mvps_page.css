@@ -1,8 +1,8 @@
 table {
-    width: 100%;
+    width: 70%;
     border-collapse: collapse;
     font-family: "Arial", sans-serif;
-    margin-top: 25px;
+    margin: 20px;
 }
 th, td {
     border: 1px solid #ddd;
@@ -25,14 +25,14 @@ img {
     height: 75px;
     width: 75px;
 }
-#first_ranked{
-    background-color: #CBB809;
+.medalla {
+    background-color: gold; /* Cambia el color de fondo para el primer lugar */
 }
-#second-ranked{
-    background-color: #A2C7DC;
+.medalla:nth-child(2) {
+    background-color: silver; /* Cambia el color de fondo para el segundo lugar */
 }
-#third-ranked{
-    background-color: #B87D34;
+.medalla:nth-child(3) {
+    background-color: #cd7f32; /* Cambia el color de fondo para el tercer lugar (bronce) */
 }
 /* Estilo para el cuerpo de la página */
 body {
@@ -42,9 +42,44 @@ body {
     flex-direction: column;
     min-height: 100vh; /
 }
-
+.title_mvps {
+    color: #FF7C00;
+    border: 4px solid #FF7C00;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 900px;
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+    margin-top: 20px;
+}
+.pos-column {
+    width: 5%;
+}
 /* Estilo para el contenido de la página */
-main {
+.mvps_contenido {
+    background-color: #D9D9D9;
+    margin: 0; /* Centra el contenido horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     flex: 1;
     overflow-y: auto; /* Añade una barra de desplazamiento vertical si el contenido es demasiado largo */
+}
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .title_mvps {
+        margin-top: 150px;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mvps_contenido {
+        background-color: white;
+    }
+    .title_mvps {
+        margin-top: 150px;
+        width: 80%;
+    }
 }

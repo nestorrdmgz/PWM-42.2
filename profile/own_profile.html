@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>CourtLink: Mi Perfil</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="../templates/header.css">
     <link rel="stylesheet" href="../templates/footer.css">
     <link rel="stylesheet" href="profile_page.css">
     <link rel="stylesheet" href="../components/image_profile.css">
     <link rel="stylesheet" href="../components/info_account.css">
     <link rel="stylesheet" href="../components/personal_info.css">
-
+    <script src="../templates/templatesEvents.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
+<div w3-include-html="../templates/header.html"></div>
 <main>
     <section class="left-column">
         <div id="image-container"></div>
     </section>
-
     <section class="right-column">
         <article>
             <div id="info_account-container"></div>
@@ -50,23 +51,22 @@
         </article>
     </section>
 </main>
-
-<footer id="footer-container"></footer>
-
+<div w3-include-html="../templates/footer.html"></div>
 <script src="../scripts/header_footer.js"></script>
 <script src="../scripts/components.js"></script>
 <script>
-    var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
+    var isLoggedIn = false; // Variable que indica si el usuario ha iniciado sesión o no
+
     document.addEventListener('DOMContentLoaded', function () {
         if (isLoggedIn) {
-            loadTemplate("../templates/header_with_login.html","header-container"); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+            loadTemplate("../templates/header_with_login.html","header-container");; // Carga el header con inicio de sesión si el usuario ha iniciado sesión
         } else {
             loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
         }
         loadTemplate("../templates/footer.html","footer-container");
-        loadTemplate("../components/image_profile.html","image-container");
-        loadTemplate("../components/info_account.html","info_account-container");
-        loadTemplate("../components/personal_info.html","personal_info-container");
+        loadImage_profile();
+        loadInfo_account();
+        loadPersonal_info();
     });
 </script>
 </body>

@@ -50,13 +50,11 @@ footer {
     color: #fff;
 }
 
-.socials a i {
+.socials img {
+    height: 25px;
+    width: 25px;
     font-size: 1.1rem;
     transition: color .4s ease;
-}
-
-.socials a:hover i {
-    color: #ff7c00;
 }
 
 .footer-links {
@@ -95,4 +93,40 @@ footer {
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
+}
+@media screen and (max-width: 1400px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    .footer-image-container {
+        margin-bottom: 20px; /* Aumenta el espacio entre el contenedor de imagen y el siguiente elemento */
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-lema {
+        text-align: center;
+    }
+
+    .socials {
+        margin-bottom: 20px; /* Aumenta el espacio entre las redes sociales y el siguiente elemento */
+    }
+
+    .footer-links {
+        margin-top: 0; /* Elimina el espacio entre las dos columnas */
+    }
+
+    .footer-links li {
+        margin-bottom: 0; /* Elimina el espacio entre los elementos de la lista */
+        margin: 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px; /* Reduce el tamaño del texto del pie de página */
+    }
 }

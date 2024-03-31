@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../components/image_profile.css">
     <link rel="stylesheet" href="../components/info_account.css">
     <link rel="stylesheet" href="../components/personal_info.css">
+    <script src="../templates/templatesEvents.js"></script>
 </head>
 <body>
 <header id="header-container"></header>
@@ -29,18 +30,6 @@
             <h1 class="titulo-article">CANCHAS FAVORITAS</h1>
             <div class="linea-horizontal"></div>
             <ul class="canchas_favoritas">
-                <li>
-                    <p>Lorem ipsum</p>
-                    <p class="estrella">⭐</p>
-                </li>
-                <li>
-                    <p>Lorem ipsum</p>
-                    <p class="estrella">⭐</p>
-                </li>
-                <li>
-                    <p>Lorem ipsum</p>
-                    <p class="estrella">⭐</p>
-                </li>
             </ul>
         </article>
     </section>
@@ -49,18 +38,21 @@
 <script src="../scripts/header_footer.js"></script>
 <script src="../scripts/components.js"></script>
 <script>
-    var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
+    var isLoggedIn = false; // Variable que indica si el usuario ha iniciado sesión o no
+
     document.addEventListener('DOMContentLoaded', function () {
         if (isLoggedIn) {
-            loadTemplate("../templates/header_with_login.html","header-container"); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+            loadTemplate("../templates/header_with_login.html","header-container");; // Carga el header con inicio de sesión si el usuario ha iniciado sesión
         } else {
             loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
         }
         loadTemplate("../templates/footer.html","footer-container");
-        loadTemplate("../components/image_profile.html","image-container");
-        loadTemplate("../components/info_account.html","info_account-container");
-        loadTemplate("../components/personal_info.html","personal_info-container");
+        loadImage_profile();
+        loadInfo_account();
+        loadPersonal_info();
     });
 </script>
+<!-- Script para manejar la carga del perfil -->
+<script src="../scripts/load_user_details.js"></script>
 </body>
 </html>

@@ -17,7 +17,6 @@ function loadFilterButton() {
         })
         .catch(error => console.error('Error cargando el filter button:', error));
 }
-
 function initializeFilterButton() {
     var button = document.getElementById("filter-button");
     var container = document.getElementById("filter-container");
@@ -54,20 +53,6 @@ function initializeFilterButton() {
         };
     }
 }
-
-// Función para cargar el detalle de los partidos
-function loadMatchDetails() {
-    fetch('../components/match_details.html')
-        .then(response => response.text())
-        .then(html => {
-            const elements = document.querySelectorAll('.match_details');
-            elements.forEach(element => {
-                element.innerHTML = html;
-                convertirBotones(element); // Llama a la función que convierte los botones
-            });
-        })
-        .catch(error => console.error('Error cargando el detalle de los partidos:', error));
-}
 // Función para convertir los botones al cargar el detalle de los partidos
 function convertirBotones(parentElement) {
     const buttons = parentElement.querySelectorAll('.anadirse-button');
@@ -83,4 +68,31 @@ function convertirBotones(parentElement) {
                 <p class="texto">Lorem ipsum</p>`;
         });
     });
+}
+
+function loadImage_profile() {
+    fetch('../components/image_profile.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('image-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error cargando el container:', error));
+}
+
+function loadInfo_account() {
+    fetch('../components/info_account.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('info_account-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error cargando el container:', error));
+}
+
+function loadPersonal_info() {
+    fetch('../components/personal_info.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('personal_info-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error cargando el container:', error));
 }

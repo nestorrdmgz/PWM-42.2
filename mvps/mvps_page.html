@@ -6,89 +6,37 @@
     <link rel="stylesheet" href="../templates/header.css">
     <link rel="stylesheet" href="../templates/footer.css">
     <link rel="stylesheet" href="mvps_page.css">
-    <script src="https://kit.fontawesome.com/30a943314d.js" crossorigin="anonymous"></script>
+    <script src="../templates/templatesEvents.js"></script>
+    <script src="../scripts/displayMvps.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
-
-<table>
-    <tr>
-        <th>Posición</th>
-        <th>Nombre del Jugador</th>
-        <th>Victorias</th>
-        <th>Elo</th>
-    </tr>
-    <tbody>
-    <tr id="first_ranked">
-        <td>1</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 1</td>
-        <td>10</td>
-        <td>9.5</td>
-    </tr>
-    <tr id="second-ranked" >
-        <td>2</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 2</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    <tr id="third-ranked">
-        <td>3</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 3</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 4</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 5</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 6</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 7</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 8</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    <tr>
-        <td>9</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 9</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td><img class="profile_picture" src="/images/default_pfp.png" alt="Foto del Usuario">Jugador 10</td>
-        <td>8</td>
-        <td>8.7</td>
-    </tr>
-    </tbody>
-</table>
-
-<footer id="footer-container"></footer>
-
+<div id="header-container"></div>
+<main class="mvps_contenido">
+    <h1 class="title_mvps">MVPs</h1>
+    <table>
+        <thead>
+        <tr>
+            <th class="pos-column">Posición</th>
+            <th class="name-column">Nombre del Jugador</th>
+            <th class="matches-column">Partidos</th>
+            <th class="elo-column">ELO</th>
+        </tr>
+        </thead>
+        <tbody id="player-list">
+        </tbody>
+    </table>
+</main>
+<div id="footer-container"></div>
 <script src="../scripts/header_footer.js"></script>
 <script>
-    // Llama a las funciones de carga cuando se carga la página
-    document.addEventListener('DOMContentLoaded', function() {
-        loadTemplate("../templates/header.html","header-container");
+    var isLoggedIn = false; // Variable que indica si el usuario ha iniciado sesión o no
+
+    document.addEventListener('DOMContentLoaded', function () {
+        if (isLoggedIn) {
+            loadTemplate("../templates/header_with_login.html","header-container"); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+        } else {
+            loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+        }
         loadTemplate("../templates/footer.html","footer-container");
     });
 </script>
