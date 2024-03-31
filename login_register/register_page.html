@@ -102,7 +102,7 @@
                 </label>
             </div>
             <div class="checkbox-container">
-                <input type="checkbox" id="terms-checkbox" class="terms-checkbox">
+                <input type="checkbox" id="terms-checkbox" class="terms-checkbox" required>
                 <label for="terms-checkbox" class="terms-label">He leído y acepto los <a href="../nosotros_terms/terms_and_conditions_page.html">términos y condiciones</a></label>
             </div>
             <input type="submit" class="register-button button" value="SIGN UP">
@@ -118,7 +118,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         if (isLoggedIn) {
-            loadTemplate("../templates/header_with_login.html","header-container");; // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+            loadTemplate("../templates/header_with_login.html","header-container"); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
         } else {
             loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
         }
