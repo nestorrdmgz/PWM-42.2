@@ -3,12 +3,12 @@
     {
       "nombre": "Partido de Baloncesto 2",
       "lugar": "IES Valsequillo",
-      "modalidad": "3 vs 3",
+      "modalidad": "2 vs 2",
       "fechaHora": "2024-04-20T20:00:00",
       "equipos": [
         {
           "nombre": "Equipo A",
-          "jugadores": [1, 2]
+          "jugadores": [1]
         },
         {
           "nombre": "Equipo B",

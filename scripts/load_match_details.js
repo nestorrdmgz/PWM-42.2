@@ -10,11 +10,11 @@ function loadMatchDetails() {
                     const matchDetailsContainer = document.getElementById('partidos-contenido');
 
                     // Cargar datos de usuarios
-                    fetch("../data/users.json")
+                    fetch("http://localhost:3000/users")
                         .then(response => response.json())
                         .then(dataUsers => {
 
-                            const usuarios = dataUsers.usuarios;
+                            const usuarios = dataUsers;
 
                             // PARA CADA PARTIDO...
                             partidos.forEach((partido, index) => {
@@ -40,7 +40,7 @@ function loadMatchDetails() {
                                     <span class="texto-filtro">${equipo.name}</span>
                                     ${equipo.players.map(jugadorId => {
                                         // Buscar el usuario con el ID correspondiente
-                                        const usuario = usuarios.find(usuario => usuario.id === jugadorId);
+                                        const usuario = usuarios.find(usuario => usuario.userId === jugadorId);
                                         if (usuario) {
                                             const imagenSrc = usuario.foto ? usuario.foto : '../images/user-icon.jpg';
                                             return `
@@ -49,7 +49,7 @@ function loadMatchDetails() {
                                                         <img class="imagen" src="${imagenSrc}" alt="Foto de perfil">
                                                         <div class="linea"></div>
                                                     </div>
-                                                    <p class="texto">${usuario.nombre} ${usuario.apellido}</p>
+                                                    <p class="texto">${usuario.name} ${usuario.surname}</p>
                                                 </button>
                                             `;
                                         }
@@ -77,30 +77,6 @@ function loadMatchDetails() {
         })
         .catch(error => console.error('Error cargando el detalle de los partidos:', error));
 }
-
-
-
-function redirectToCourtDetails(location) {
-    // Obtener el JSON de las canchas
-    fetch('../data/locations.json')
-        .then(response => response.json())
-        .then(data => {
-            // Buscar la cancha correspondiente al lugar del partido
-            const court = data.locations.find(court => court.name === location);
-            if (court) {
-                // Construir la URL de los detalles de la cancha utilizando las coordenadas de la cancha
-                const courtDetailsPage = '../canchas/cancha_details_page.html';
-                const courtDetailsURL = `${courtDetailsPage}?lat=${court.coordinates[0]}&lng=${court.coordinates[1]}`;
-
-                // Redirigir al usuario a los detalles de la cancha
-                window.location.href = courtDetailsURL;
-            } else {
-                console.error(`No se encontró la cancha correspondiente al lugar "${location}".`);
-            }
-        })
-        .catch(error => console.error('Error cargando datos de las canchas:', error));
-}
-
 
 
 // Función para obtener el número máximo de jugadores según la modalidad

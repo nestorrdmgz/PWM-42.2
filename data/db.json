@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "userId": "1",
+      "userId": 1,
       "name": "Néstor Román",
       "surname": "Domínguez Moreno",
       "email": "nestorrdmgz@gmail.com",
@@ -22,7 +22,7 @@
       "id": "585e"
     },
     {
-      "userId": "2",
+      "userId": 2,
       "name": "Martina",
       "surname": "Pérez",
       "email": "martina@gmail.com",
@@ -74,11 +74,32 @@
       "teams": [
         {
           "name": "Equipo A",
-          "players": [1, 2]
+          "players": [
+            1
+          ]
         },
         {
           "name": "Equipo B",
-          "players": [3, 4, 6]
+          "players": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aad8",
+      "name": "Día entre amigos",
+      "ubication": "Maspalomas",
+      "date": "2024-04-06T10:11",
+      "modality": "1 vs 1",
+      "teams": [
+        {
+          "name": "Equipo A",
+          "players": []
+        },
+        {
+          "name": "Equipo B",
+          "players": []
         }
       ]
     }
