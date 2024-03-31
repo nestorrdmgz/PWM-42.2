@@ -114,9 +114,15 @@
 <script src="../scripts/isla_y_municipio.js"></script>
 <script src="../scripts/header_footer.js"></script>
 <script>
-    // Llama a las funciones de carga cuando se carga la página
+    var isLoggedIn = false; // Variable que indica si el usuario ha iniciado sesión o no
+
     document.addEventListener('DOMContentLoaded', function () {
-        loadHeader();
+        if (isLoggedIn) {
+            loadTemplate("../templates/header_with_login.html","header-container");; // Carga el header con inicio de sesión si el usuario ha iniciado sesión
+        } else {
+            loadTemplate("../templates/header.html","header-container"); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
+        }
+        loadTemplate("../templates/footer.html","footer-container");
     });
 </script>
 </body>

@@ -1,3 +1,13 @@
+
+// Función para cargar el header
+function loadTemplate(file, id) {
+    fetch(file)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById(id).innerHTML = html;
+        })
+        .catch(error => console.error('Error loading template:', error));
+}
 /*
 // Función para cargar el header
 function loadHeader() {
@@ -8,7 +18,6 @@ function loadHeader() {
         })
         .catch(error => console.error('Error cargando el header:', error));
 }
-*/
 // Función para cargar el header
 function loadHeader() {
     fetch('../templates/header.html')
@@ -50,4 +59,4 @@ function loadFooter() {
         })
         .catch(error => console.error('Error cargando el footer:', error));
 }
-
+*/
