@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>CourtLink: Añadir cancha</title>
@@ -31,7 +31,7 @@
             <div id="map"></div>
         </div>
         <div class="checkbox-container">
-            <input type="checkbox" id="light-checkbox" class="light-checkbox"  name="light-checkbox">
+            <input type="checkbox" id="light-checkbox" class="light-checkbox" name="light-checkbox">
             <label for="light-checkbox" class="light-label">La cancha está iluminada</label>
         </div>
 
@@ -45,59 +45,11 @@
         <input type="submit" class="button" value="Añadir" id="add-court-button" name="add-court-button">
     </form>
 </main>
+</body>
+</html>
 <footer id="footer-container"></footer>
 <script src="../scripts/header_footer.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script>
-    var isLoggedIn = true; // Variable que indica si el usuario ha iniciado sesión o no
-    document.addEventListener('DOMContentLoaded', function () {
-        if (isLoggedIn) {
-            loadLoggedHeader(); // Carga el header con inicio de sesión si el usuario ha iniciado sesión
-        } else {
-            loadHeader(); // Carga el header sin inicio de sesión si el usuario no ha iniciado sesión
-        }
-        loadFooter();
-    });
-
-    var map = L.map('map').setView([28.09973, -15.41343], 12);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-    }).addTo(map);
-
-    var marker;
-    function onMapClick(e) {
-        if (marker) {
-            map.removeLayer(marker);
-        }
-        marker = new L.marker(e.latlng).addTo(map);
-        document.getElementById('selected-location').textContent = "Latitud: " + e.latlng.lat.toFixed(5) + ", Longitud: " + e.latlng.lng.toFixed(5);
-    }
-    map.on('click', onMapClick);
-
-    document.getElementById('add-cancha-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        var nombre = document.getElementById('cancha-name').value;
-        var iluminacion = document.getElementById('light-checkbox').checked;
-        var foto = document.getElementById('myFile').files[0];
-        var ubicacion = document.getElementById('selected-location').textContent; // Obtener la ubicación del texto
-
-        // Convertir la ubicación de texto a coordenadas separadas
-        var ubicacionSplit = ubicacion.split(":");
-        var latitud = parseFloat(ubicacionSplit[1].trim().split(",")[0]);
-        var longitud = parseFloat(ubicacionSplit[2].trim());
-
-        var nuevaCancha = {
-            "name": nombre,
-            "coordinates": [latitud, longitud],
-            "iluminacion": iluminacion,
-            "foto": foto ? URL.createObjectURL(foto) : null
-        };
-
-        console.log('Nueva Cancha:', nuevaCancha);
-        // Aquí deberías enviar los datos al servidor para que los procese y actualice el archivo JSON correspondiente
-    });
-</script>
 <script src="../scripts/add_court.js"></script>
 </body>
 </html>
