@@ -1,28 +1,12 @@
-/*
-// Función para cargar el detalle de los partidos
-function loadMatchDetails() {
-    fetch('../components/match_details.html')
-        .then(response => response.text())
-        .then(html => {
-            const elements = document.querySelectorAll('.match_details');
-            elements.forEach(element => {
-                element.innerHTML = html;
-                convertirBotones(element); // Llama a la función que convierte los botones
-            });
-        })
-        .catch(error => console.error('Error cargando el detalle de los partidos:', error));
-}
-*/
-
 function loadMatchDetails() {
     fetch('../components/match_details.html')
         .then(response => response.text())
         .then(template => {
             // Cargar los datos desde el archivo JSON
-            fetch('../data/matches.json')
+            fetch('http://localhost:3000/matches')
                 .then(response => response.json())
                 .then(data => {
-                    const partidos = data.partidos;
+                    const partidos = data;
                     const matchDetailsContainer = document.getElementById('partidos-contenido');
 
                     // Cargar datos de usuarios
@@ -41,20 +25,20 @@ function loadMatchDetails() {
                                 matchContainer.innerHTML = template; // Usar la plantilla HTML
 
                                 const matchDetailsDiv = matchContainer.querySelector('.match-details');
-                                matchDetailsDiv.querySelector('.texto-titulo-partido').textContent = `${partido.nombre} - ${partido.modalidad}`;
-                                matchDetailsDiv.querySelector('.texto-location').textContent = partido.lugar;
-                                matchDetailsDiv.querySelector('.fecha-y-hora').textContent = partido.fechaHora;
+                                matchDetailsDiv.querySelector('.texto-titulo-partido').textContent = `${partido.name} - ${partido.modality}`;
+                                matchDetailsDiv.querySelector('.texto-location').textContent = partido.ubication;
+                                matchDetailsDiv.querySelector('.fecha-y-hora').textContent = partido.date;
 
                                 const matchTeamsDiv = matchContainer.querySelector('.match-teams');
                                 matchTeamsDiv.innerHTML = ''; // Limpiar equipos existentes
 
-                                partido.equipos.forEach(equipo => {
+                                partido.teams.forEach(equipo => {
                                     const teamContainer = document.createElement('div');
                                     teamContainer.classList.add('team-container');
 
                                     teamContainer.innerHTML = `
-                                    <span class="texto-filtro">${equipo.nombre}</span>
-                                    ${equipo.jugadores.map(jugadorId => {
+                                    <span class="texto-filtro">${equipo.name}</span>
+                                    ${equipo.players.map(jugadorId => {
                                         // Buscar el usuario con el ID correspondiente
                                         const usuario = usuarios.find(usuario => usuario.id === jugadorId);
                                         if (usuario) {
@@ -70,7 +54,7 @@ function loadMatchDetails() {
                                             `;
                                         }
                                     }).join('')}
-                                    ${equipo.jugadores.length < getNumeroMaximoJugadores(partido.modalidad) ? `
+                                    ${equipo.players.length < getNumeroMaximoJugadores(partido.modality) ? `
                                         <button class="anadirse-button" onclick="convertirAUsuario(this)">
                                             <div class="imagen-container">
                                                 <img class="imagen" src="../images/plus-vector.png" alt="Add user">

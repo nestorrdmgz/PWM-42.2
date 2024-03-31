@@ -67,27 +67,18 @@
   ],
   "matches": [
     {
-      "id": "1",
-      "name": "Partido de Baloncesto 1",
-      "ubication": 1,
+      "name": "Partido de Baloncesto 2",
+      "ubication": "IES Valsequillo",
       "modality": "3 vs 3",
-      "date": "2024-04-15T18:00:00",
+      "date": "2024-04-20T20:00:00",
       "teams": [
         {
           "name": "Equipo A",
-          "players": [
-            1,
-            2,
-            3
-          ]
+          "players": [1, 2]
         },
         {
           "name": "Equipo B",
-          "players": [
-            4,
-            5,
-            6
-          ]
+          "players": [3, 4, 6]
         }
       ]
     }
