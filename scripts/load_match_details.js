@@ -84,11 +84,11 @@ function loadMatchDetails() {
                                     matchTeamsDiv.appendChild(teamContainer);
                                 });
 
-                        matchDetailsContainer.appendChild(matchContainer);
-                    });
+                                matchDetailsContainer.appendChild(matchContainer);
+                            });
 
-                    convertirBotones(matchDetailsContainer); // Llama a la función que convierte los botones
-                })
+                            convertirBotones(matchDetailsContainer); // Llama a la función que convierte los botones
+                        })
                 })
                 .catch(error => console.error('Error cargando datos de partidos:', error));
         })
@@ -144,5 +144,6 @@ function storeSelectedUser(userId) {
     // Almacenar el ID del usuario seleccionado en localStorage
     localStorage.setItem('selectedUserId', userId);
     // Redirigir a la página de perfil externo
-    window.location.href = '../profile/external_profile_page.html';
+    // window.location.href='../profile/external_profile_page.html';
+    // alert(localStorage.selectedUserId);
 }

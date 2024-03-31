@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="../templates/footer.css">
     <script src="../templates/templatesEvents.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
 </head>
 <body>
-<div w3-include-html="../templates/header.html"></div>
+<div id="header-container"></div>
 <main class="add-match-contenido">
     <h1 class="title_add_match">AÑADIR PARTIDO</h1>
     <form class="add-match-form">
@@ -62,7 +61,8 @@
         <input type="submit" class="add-match-button button" id="add-match-button" value="AÑADIR">
     </form>
 </main>
-<div w3-include-html="../templates/footer.html"></div>
+<div id="footer-container"></div>
+<script src="../scripts/header_footer.js"></script>
 <script src="../scripts/header_footer.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="../scripts/localizaciones.js"></script>
@@ -78,7 +78,6 @@
         }
         loadFooter();
     });
-    w3IncludeHTML();
 </script>
 </body>
 </html>

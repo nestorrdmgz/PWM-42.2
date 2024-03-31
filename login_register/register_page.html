@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <title>Regístrate</title>
     <link rel="stylesheet" href="login_register_page.css">
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script src="../templates/templatesEvents.js"></script>
     <script src="../scripts/validar_registro.js"></script>
     <link rel="stylesheet" href="../templates/header.css">
 </head>
 <body>
-<div class="log-header" w3-include-html="../templates/header.html"></div>
+<div class="log-header" id="header-container"></div>
 <main class="register-page-container">
     <div class="logo-mobile-container">
         <span class="slogan-mobile">Únete ya al Dream Team de jugadores que se han ligado a nuestra plataforma</span>
@@ -113,8 +112,12 @@
     </form>
 </main>
 <script src="../scripts/isla_y_municipio.js"></script>
+<script src="../scripts/header_footer.js"></script>
 <script>
-    w3IncludeHTML();
+    // Llama a las funciones de carga cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function () {
+        loadHeader();
+    });
 </script>
 </body>
 </html>

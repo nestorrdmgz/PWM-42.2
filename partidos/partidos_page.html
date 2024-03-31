@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="../components/add_match_filter_button.css">
     <link rel="stylesheet" href="../components/match_details.css">
     <link rel="stylesheet" href="partidos_page.css">
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script src="../templates/templatesEvents.js"></script>
     <script src="../scripts/localizaciones.js"></script>
 </head>
 <body>
-<div w3-include-html="../templates/header.html"></div>
+<div id="header-container"></div>
 <main>
     <div id="partidos-contenido">
         <div class="title-buttons">
@@ -25,7 +24,7 @@
         </div>
     </div>
 </main>
-<div w3-include-html="../templates/footer.html"></div>
+<div id="footer-container"></div>
 <script src="../scripts/header_footer.js"></script>
 <script src="../scripts/components.js"></script>
 <script src="../scripts/load_match_details.js"></script>
@@ -38,6 +37,7 @@
         loadFilterButton();
         loadMatchDetails();
         getNumeroMaximoJugadores();
+        storeSelectedUser();
     });
     w3IncludeHTML();
 </script>

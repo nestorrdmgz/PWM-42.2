@@ -6,13 +6,12 @@
     <link rel="stylesheet" href="../templates/header.css">
     <link rel="stylesheet" href="../templates/footer.css">
     <link rel="stylesheet" href="canchas_page.css">
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script src="../templates/templatesEvents.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-<div w3-include-html="../templates/header.html"></div>
+<div id="header-container"></div>
 <main class="canchas-contenido">
     <h1 class="title_canchas">CANCHAS</h1>
     <button id="add-court-button" class="button" onclick="window.location.href='add_cancha_page.html';">Añadir cancha</button>
@@ -23,11 +22,11 @@
     </div>
     <a href="cancha_details_page.html" class="details-button" onclick="storeSelectedLocation(document.getElementById('selected-location').textContent)">Detalles de la cancha</a>
 </main>
-<div w3-include-html="../templates/footer.html"></div>
+<div id="footer-container"></div>
+<script src="../scripts/header_footer.js"></script>
 <script src="../scripts/localizaciones.js"></script>
 <script src="../scripts/selectedLocation.js"></script>
 <script>
-    w3IncludeHTML();
     // Llama a las funciones de carga cuando se carga la página
     document.addEventListener('DOMContentLoaded', function () {
         loadHeader();
