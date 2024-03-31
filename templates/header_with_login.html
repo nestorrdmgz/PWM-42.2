@@ -8,8 +8,37 @@
 </head>
 <body>
 <header class="header">
-    <img src="../images/logoWebPrincipal.png" alt="Courtlink© Logo" class="header_logo">
-    <nav class="navbar">
+    <!-- Top Navigation Menu -->
+    <div class="mobile-navbar">
+        <!-- Burger button -->
+        <div id="burger-button" class="burger-button" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <i class="fa fa-bars"></i>
+        </div>
+        <img src="../images/logoFooterLetras.png" alt="Courtlink© Logo" class="header_logo" id="logo_mobile"
+             onclick="irAPaginaDeInicio()">
+        <a href="../login_register/login_page.html">
+            <img src="../images/user-icon.jpg" alt="Login" class="login_account_image">
+        </a>
+    </div>
+
+    <!-- Links adaptados para el header móvil -->
+    <div id="myLinks">
+        <a href="../homepage/homepage.html">Inicio</a>
+        <a href="../canchas/canchas_page.html">Canchas</a>
+        <a href="../partidos/partidos_page.html">Partidos</a>
+        <a href="../mvps/mvps_page.html">MVPs</a>
+        <a href="../nosotros_terms/nosotros_page.html">Nosotros</a>
+    </div>
+
+    <!-- Logo -->
+    <img src="../images/logoWebPrincipal.png" alt="Courtlink© Logo" class="header_logo" id="logo_desktop"
+         onclick="irAPaginaDeInicio()">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
         <a href="../homepage/homepage.html" class="header_nav_button">INICIO</a>
         <a href="../partidos/partidos_page.html" class="header_nav_button">PARTIDOS</a>
         <a href="../canchas/canchas_page.html" class="header_nav_button">CANCHAS</a>

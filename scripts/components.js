@@ -17,20 +17,6 @@ function loadFilterButton() {
         })
         .catch(error => console.error('Error cargando el filter button:', error));
 }
-// Función para cargar el botón de añadir partido
-function loadBurgerButton() {
-    fetch('../components/burger_button.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('burger-button').innerHTML = html;
-            // Agregar el evento onclick después de cargar el HTML del botón de hamburguesa
-            const burgerButton = document.querySelector('.container');
-            burgerButton.addEventListener('click', function() {
-                this.classList.toggle('change');
-            });
-        })
-        .catch(error => console.error('Error cargando el burger button:', error));
-}
 function initializeFilterButton() {
     var button = document.getElementById("filter-button");
     var container = document.getElementById("filter-container");

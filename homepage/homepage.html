@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="homepage.css">
     <script src="../templates/templatesEvents.js"></script>
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
-
+    <script src="../scripts/validar_fecha.js"></script>
 </head>
 <body>
 <div w3-include-html="../templates/header.html"></div>
@@ -27,7 +27,7 @@
         </article>
         <article class="right">
             <h1>Encuentra basketlovers a tu alrededor</h1>
-            <form action="partidos_page.html">
+            <form class="homepage-form" action="../partidos/partidos_page.html" onsubmit="return validarFormulario()">
                 <input type="number" placeholder="Código postal" min="35000" max="38917">
                 <select id="opciones">
                     <option value="1vs1">1 vs 1</option>
@@ -36,7 +36,7 @@
                     <option value="4vs4">4 vs 4</option>
                     <option value="5vs5">5 vs 5</option>
                 </select>
-                <input type="date">
+                <input type="datetime-local" id="fecha" min="" required>
                 <input type="submit" value="Buscar">
             </form>
         </article>

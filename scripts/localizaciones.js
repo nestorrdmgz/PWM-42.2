@@ -1,3 +1,4 @@
+/* SCRIPT PARA CARGAR LOCALIZACIONES DE LAS CANCHAS */
 fetch('../data/locations.json')
     .then(response => response.json())
     .then(data => {

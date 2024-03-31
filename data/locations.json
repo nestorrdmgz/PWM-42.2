@@ -7,7 +7,8 @@
         -15.45714
       ],
       "iluminacion": true,
-      "foto": "https://estaticos-cdn.prensaiberica.es/clip/31d46d17-8d16-4682-92bd-8bb1b363eab4_16-9-aspect-ratio_default_0.jpg"
+      "foto": "https://estaticos-cdn.prensaiberica.es/clip/31d46d17-8d16-4682-92bd-8bb1b363eab4_16-9-aspect-ratio_default_0.jpg",
+      "id": 1
     },
     {
       "name": "Pabellón polideportivo ULPGC",
@@ -16,7 +17,8 @@
         -15.4561
       ],
       "iluminacion": true,
-      "foto": "https://cdn.cbgrancanaria.net/2022/11/09185557/GCULPGC11-1024x580.png"
+      "foto": "https://cdn.cbgrancanaria.net/2022/11/09185557/GCULPGC11-1024x580.png",
+      "id": 2
     },
     {
       "name": "Canchas Deportivas Alcaravaneras",
@@ -25,7 +27,8 @@
         -15.42888
       ],
       "iluminacion": true,
-      "foto": "https://i.ytimg.com/vi/GWQdnc_imOE/maxresdefault.jpg"
+      "foto": "https://i.ytimg.com/vi/GWQdnc_imOE/maxresdefault.jpg",
+      "id": 3
     },
     {
       "name": "Pabellón Insular Rita Hernández",
@@ -34,7 +37,8 @@
         -15.40408
       ],
       "iluminacion": false,
-      "foto": "https://www.teldeporte.com/wp-content/uploads/2022/12/1-canchas-rita-hernanadez.jpg"
+      "foto": "https://www.teldeporte.com/wp-content/uploads/2022/12/1-canchas-rita-hernanadez.jpg",
+      "id": 4
     },
     {
       "name": "Pabellón Exterior Narea",
@@ -43,7 +47,8 @@
         -15.41178
       ],
       "iluminacion": false,
-      "foto": null
+      "foto": null,
+      "id": 5
     },
     {
       "name": "IES Valsequillo",
@@ -52,7 +57,8 @@
         -15.49841
       ],
       "iluminacion": true,
-      "foto": "https://lh3.googleusercontent.com/proxy/DoPBcgHZAh0pE3cZofTgs1NY_q_IX9xpdsyIMcz7zF-kYryShaC68tzrN5IBs1MdOUSpLZMk0kl5fpfkjPQA4V9UyP3cGgrJ6hVe3-m80iF1VsVXlGIhOF73LcLCHLGEeelPiFTy77AqLbL2NAQh"
+      "foto": "https://lh3.googleusercontent.com/proxy/DoPBcgHZAh0pE3cZofTgs1NY_q_IX9xpdsyIMcz7zF-kYryShaC68tzrN5IBs1MdOUSpLZMk0kl5fpfkjPQA4V9UyP3cGgrJ6hVe3-m80iF1VsVXlGIhOF73LcLCHLGEeelPiFTy77AqLbL2NAQh",
+      "id": 6
     },
     {
       "name": "IES Schamann",
@@ -61,7 +67,8 @@
         -15.43537
       ],
       "iluminacion": true,
-      "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS_SJdhNU9nnAYe4z7FqHFI9ga24LUo77R6w&usqp=CAU"
+      "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS_SJdhNU9nnAYe4z7FqHFI9ga24LUo77R6w&usqp=CAU",
+      "id": 7
     },
     {
       "name": "Pabellón Nicolas González Vega",
@@ -70,7 +77,8 @@
         -15.42485
       ],
       "iluminacion": true,
-      "foto": "https://ingenio.es/wp-content/uploads/2022/01/VISITA-MEJORAS-PABELLON-NICOLAS-GONZALEZ-2.jpg"
+      "foto": "https://ingenio.es/wp-content/uploads/2022/01/VISITA-MEJORAS-PABELLON-NICOLAS-GONZALEZ-2.jpg",
+      "id": 8
     },
     {
       "name": "Instalaciones Polideportivas de Guanarteme",
@@ -79,7 +87,8 @@
         -15.44049
       ],
       "iluminacion": true,
-      "foto": "https://estaticos-cdn.prensaiberica.es/clip/4b524e70-431e-4d74-bd5c-c5a8492504f2_16-9-aspect-ratio_default_0.jpg"
+      "foto": "https://estaticos-cdn.prensaiberica.es/clip/4b524e70-431e-4d74-bd5c-c5a8492504f2_16-9-aspect-ratio_default_0.jpg",
+      "id": 9
     }
   ]
 }

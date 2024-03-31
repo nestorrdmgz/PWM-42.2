@@ -68,7 +68,7 @@ form {
 }
 
 input[type="number"],
-input[type="date"],
+input[type="datetime-local"],
 select {
     padding: 15px;
     border-radius: 5px;

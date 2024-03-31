@@ -60,12 +60,13 @@ function loadMatchDetails() {
                                         if (usuario) {
                                             const imagenSrc = usuario.foto ? usuario.foto : '../images/user-icon.jpg';
                                             return `
-                                                <button class="boton-usuario">
+                                                <button class="boton-usuario" onclick="storeSelectedUser(${usuario.id})">
                                                     <div class="imagen-container">
                                                         <img class="imagen" src="${imagenSrc}" alt="Foto de perfil">
-                                                        <div class="linea"></div>
+                                                    <div class="linea"></div>
                                                     </div>
                                                     <p class="texto">${usuario.nombre} ${usuario.apellido}</p>
+                                                    <span id="selectedUserId" style="display: none">${usuario.id}</span>
                                                 </button>
                                             `;
                                         }
@@ -137,4 +138,11 @@ function getNumeroMaximoJugadores(modalidad) {
         default:
             return 0;
     }
+}
+
+function storeSelectedUser(userId) {
+    // Almacenar el ID del usuario seleccionado en localStorage
+    localStorage.setItem('selectedUserId', userId);
+    // Redirigir a la página de perfil externo
+    window.location.href = '../profile/external_profile_page.html';
 }

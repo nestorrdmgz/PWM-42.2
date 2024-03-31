@@ -55,7 +55,7 @@
     text-align: center;
     padding: 10px;
 }
-#datetime-input {
+#fecha {
     width: 420px;
     height: 40px;
     font-size: 20px;
@@ -125,7 +125,7 @@
     #modalidad {
         width: 50%;
     }
-    #datetime-input {
+    #fecha {
         width: 50%;
     }
     #selected-location {

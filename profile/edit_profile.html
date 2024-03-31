@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>Courtlink: Editar perfil</title>
     <link rel="stylesheet" href="edit_profile.css">
-    <link rel="stylesheet" href="../templates/header.css">
-    <link rel="stylesheet" href="../templates/footer.css">
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script src="../templates/templatesEvents.js"></script>
+    <script src="../scripts/validar_registro.js"></script>
+    <link rel="stylesheet" href="../templates/header.css">
+    <link rel="stylesheet" href="../templates/footer.css">
 </head>
 <body>
 <div w3-include-html="../templates/header.html"></div>
 <main>
     <section class="card">
-        <form class="card-form">
+        <form class="card-form" action="../profile/own_profile.html" onsubmit="return validarFormulario()">
             <div class="profile-container">
                 <input type="file" id="file-input" accept="image/*">
                 <label for="file-input" class="file-label"></label>
@@ -23,7 +24,7 @@
                 <input type="text" id="nombre" placeholder="Nombre" required>
                 <input type="text" id="apellidos" placeholder="Apellidos" required>
             </div>
-            <input type="email" placeholder="Correo electrónico" required>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
             <div class="island_and_place">
                 <label>
                     Isla:
@@ -77,6 +78,37 @@
         loadFooter();
     });
     w3IncludeHTML();
+
+
+    function validarFormulario(event) {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var regex = /^(?=.*[A-Z].*[A-Z])(?=.*\d).{6,}$/;
+        var dominio = email.split('@')[1];
+        var dominiosTemporales = ['example.com', 'tempmail.com', 'mailinator.com', 'guerrillamail.com'];
+        // Obtener la lista de usuarios del archivo JSON
+        fetch('../data/users.json')
+            .then(response => response.json())
+            .then(data => {
+                // Verificar si el correo electrónico ya está registrado
+                var usuarios = data.usuarios;
+                var correoExistente = usuarios.some(usuario => usuario.email === email);
+                if (correoExistente) {
+                    alert('Este correo electrónico ya está registrado. Por favor, elija otro o inicie sesión.');
+                    return false; // Evitar que el formulario se envíe
+                }
+            })
+            .catch(error => console.error('Error al leer el archivo JSON:', error));
+        if (dominiosTemporales.includes(dominio)) {
+            alert('No se permiten correos electrónicos temporales.');
+            return false;
+        }
+        if (!regex.test(password)) {
+            alert('La contraseña debe contener al menos tres letras mayúsculas y un número, y tener una longitud mínima de 6 caracteres');
+            return false; // Evitar que el formulario se envíe
+        }
+        return true;
+    }
 </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// Función para almacenar la ubicación seleccionada antes de redirigir
+/* SCRIPT PARA ALMACENAR LA UBICACIÓN SELECCIONADA ANTES DE REDIRIGIR */
 function storeSelectedLocation(locationName) {
     localStorage.setItem('selectedLocation', locationName);
 }

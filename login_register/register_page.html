@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="login_register_page.css">
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script src="../templates/templatesEvents.js"></script>
+    <script src="../scripts/validar_registro.js"></script>
     <link rel="stylesheet" href="../templates/header.css">
 </head>
 <body>
 <div class="log-header" w3-include-html="../templates/header.html"></div>
-<div class="register-page-container">
+<main class="register-page-container">
     <div class="logo-mobile-container">
         <span class="slogan-mobile">Únete ya al Dream Team de jugadores que se han ligado a nuestra plataforma</span>
     </div>
     <img alt="image" src="../images/logoLogin.png" class="logo-login"/>
     <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
-    <form class="register-page-form" action="../homepage/homepage.html">
+    <form class="register-page-form" action="../homepage/homepage.html" onsubmit="return validarFormulario()">
         <span class="register-text">REGÍSTRATE</span>
         <div class="register-page-inputs">
             <label>
@@ -24,6 +25,7 @@
                         type="text"
                         placeholder="Nombre"
                         class="register-page-nameinput input"
+                        name="nombre"
                         required
                 />
             </label>
@@ -32,6 +34,7 @@
                         type="text"
                         placeholder="Apellidos"
                         class="register-page-surnameinput input"
+                        name="apellido"
                         required
                 />
             </label>
@@ -40,6 +43,8 @@
                         type="email"
                         placeholder="Correo electrónico"
                         class="register-page-mailinput input"
+                        name="email"
+                        id="email"
                         required
                 />
             </label>
@@ -48,13 +53,15 @@
                         type="password"
                         placeholder="Contraseña"
                         class="register-page-passwdinput input"
+                        name="password"
+                        id="password"
                         required
                 />
             </label>
             <div class="island_and_place">
                 <label>
                     Isla:
-                    <select id="island" class="register-page-islandinput input">
+                    <select id="island" class="register-page-islandinput input" name="isla">
                         <option value="isla1">Gran Canaria</option>
                         <option value="isla2">Tenerife</option>
                         <option value="isla3">La Palma</option>
@@ -67,7 +74,7 @@
                 </label>
                 <label>
                     Municipio:
-                    <select id="municipality" class="register-page-placedinput input"></select>
+                    <select id="municipality" class="register-page-placedinput input" name="municipio"></select>
                 </label>
             </div>
             <div class="height_and_position">
@@ -80,12 +87,13 @@
                             id="height"
                             min="150"
                             max="230"
+                            name="altura"
                             required
                     />
                 </label>
                 <label>
                     Posición:
-                    <select id="position" class="register-page-positioninput input">
+                    <select id="position" class="register-page-positioninput input" name="posicion">
                         <option value="Base">Base</option>
                         <option value="Escolta">Escolta</option>
                         <option value="Alero">Alero</option>
@@ -103,7 +111,7 @@
             <a href="login_page.html" class="register-page-navlink">Inicia sesión</a>
         </div>
     </form>
-</div>
+</main>
 <script src="../scripts/isla_y_municipio.js"></script>
 <script>
     w3IncludeHTML();

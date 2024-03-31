@@ -6,6 +6,8 @@ body {
 
 .foto-perfil {
     border-radius: 50%;
+    width: 300px; /* Establecer tanto el ancho como la altura */
     height: 300px;
     margin-bottom: 20px;
+    object-fit: cover; /* Para manejar el ajuste de la imagen dentro del contenedor */
 }
